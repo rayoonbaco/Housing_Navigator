@@ -180,3 +180,10 @@ summary:focus-visible { outline:3px solid var(--teal); outline-offset:4px; }
 .reviewed-answer { margin:0; font-size:1.03rem; line-height:1.55; }
 .reviewed-preview .button { justify-self:start; }
 .full-reviewed-explanation .reviewed-answer { margin-top:10px; }
+/* Scoped source disclosures: evidence remains exact, full and keyboard-accessible. */
+.evidence-disclosure>summary { color:var(--teal-deep); line-height:1.4; }
+.evidence-disclosure[open]>summary { margin-bottom:12px; }
+.evidence-disclosure .quote + .evidence-link { display:block; margin:8px 0 16px; }
+.evidence-disclosure .receipt-span-id { margin-top:12px; }
+.receipt-citation { margin:12px 0; color:var(--ink-soft); font-weight:650; }
+.integrity-note { margin:0; color:#765000; font-size:.85rem; }

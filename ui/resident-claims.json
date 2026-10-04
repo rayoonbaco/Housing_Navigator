@@ -1,0 +1,458 @@
+{
+  "version": "resident-claims-coordinator-audit-3",
+  "claims": [
+    {
+      "team_rule_id": "HN-R2-D025-003-008",
+      "rule_fingerprint": "69b39e27513433ec1ef06dcb603336afaeaa5357a83e4b1396a78d4d40a9bd3f",
+      "claim_id": "HN-R2-D025-003-008:meaning",
+      "text": "Under California law, a lease or rental agreement may not include a provision describing any security (such as a deposit) as 'nonrefundable.'",
+      "evidence": [
+        {
+          "span_id": "support:0",
+          "text": "subdivision (k), may subject the landlord or the landlord’s successors in interest to statutory damages of up to twice the amount of the security, in addition to actual damages. The court may award damages for bad faith whenever the facts warrant that award,\nregardless of whether the injured party has specifically requested relief. In an action under this section, the landlord or the landlord’s successors in interest shall have the burden of proof as to the reasonableness of the amounts claimed or the authority pursuant to this section to demand additional security deposits.\n(n) A lease or rental agreement shall not contain a provision characterizing any security as “nonrefundable.”\n(o) An action under this section may be maintained in small claims court if the damages claimed, whether actual, statutory, or both, are within the jurisdictional amount allowed by Section 116.220 or 116.221 of the Code of Civil Procedure.\n(p) Proof of the existence of and the amount of a security\ndeposit may be established by any credible evidence, including, but not limited to, a canceled check, a receipt, a lease indicating the requirement of a deposit as well as the amount, prior consistent statements or actions of the landlord or tenant, or a statement under penalty of perjury that satisfies the credibility requirements set forth in Section 780 of the Evidence Code.\n(q) The amendments to this section made during the 1985 portion of the 1985–86 Regular Session of the Legislature that are set "
+        }
+      ],
+      "extractor": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXsy7qPRtff2Y3zPWZJ"
+      },
+      "reviewer": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXtSkzQWvho2eRmrNPy",
+        "reason": "Cal. Civ. Code 1950.5(n) says a lease or rental agreement shall not contain a provision characterizing any security as 'nonrefundable'; the rewrite matches."
+      },
+      "scope": "rule_meaning"
+    },
+    {
+      "team_rule_id": "HN-D026-001-002",
+      "rule_fingerprint": "37a5683ebea558811cd2b8348b43a50efe6f0d6b5aba3243b3c856929e804dee",
+      "claim_id": "HN-D026-001-002:meaning",
+      "text": "Under California law, a landlord (an owner of residential rental property) or their agent may not charge an applicant a screening fee when they know or should have known that no rental unit is available at that time or will be available within a reasonable period of time.",
+      "evidence": [
+        {
+          "span_id": "support:0",
+          "text": "include, but is not limited to, personal reference checks and consumer credit reports produced by consumer credit reporting agencies as defined in Section 1785.3. A landlord or their agent may, but is not required to, accept and rely upon a consumer credit report presented by an applicant.\n(b) The amount of the application screening fee shall not be greater than the actual\nout-of-pocket costs of gathering information concerning the applicant, including, but not limited to, the cost of using a tenant screening service or a consumer credit reporting service, and the reasonable value of time spent by the landlord or their agent in obtaining information on the applicant. In no case shall the amount of the application screening fee charged by the landlord or their agent be greater than thirty dollars ($30) per applicant. The thirty dollar ($30) application screening fee may be adjusted annually by the landlord or their agent commensurate with an increase in the Consumer Price Index, beginning on January 1, 1998.\n(c) (1) A landlord or their agent shall not charge an applicant an application screening fee when they know or should have known that no rental unit is available at that time or will be available within a reasonable period of time.\n(2) A landlord or their agent may charge an applicant an application screening fee only if the landlord or their agent, at the time the application screening fee is collected, offers any of the following:\n(A) An application screening process "
+        },
+        {
+          "span_id": "support:1",
+          "text": "entire screening fee to any applicant who is not selected for tenancy, regardless of the reason, within 7 days of selecting an applicant for tenancy or 30 days of when the application was submitted, whichever occurs first.\n(d) The landlord or their agent shall provide, personally, or by mail, the applicant with a receipt for the fee paid by the applicant, which receipt shall itemize the out-of-pocket expenses and time spent by the landlord or their agent to obtain and process the information about the applicant. The landlord or their agent and the applicant may agree to have the landlord provide a copy of the receipt for the fee paid by the applicant to an email account provided by the applicant.\n(e) If the landlord or their agent does\nnot perform a personal reference check or does not obtain a consumer credit report, the landlord or their agent shall return any amount of the screening fee that is not used for the purposes authorized by this section to the applicant.\n(f) If an application screening fee has been paid by the applicant, the landlord or their agent shall provide a copy of the consumer credit report to the applicant who is the subject of that report by personal delivery, mail, or email within seven days of the landlord or their agent receiving the report.\n(g) Nothing in this section prevents a landlord from accepting a reusable screening report pursuant to Section 1950.1.\n(h) As used in this section, “landlord” means an owner of residential rental property.\n"
+        }
+      ],
+      "extractor": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXsy7qPRtff2Y3zPWZJ"
+      },
+      "reviewer": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXtSkzQWvho2eRmrNPy",
+        "reason": "Matches 1950.6(c)(1): no screening fee when the landlord or agent knows or should have known that no unit is available now or within a reasonable time. Landlord is correctly defined as an owner of residential rental property."
+      },
+      "scope": "rule_meaning"
+    },
+    {
+      "team_rule_id": "HN-D027-001-005",
+      "rule_fingerprint": "fc6143f2e1f9424210033c76847d6591130c1cdbafddf055651cc25cb785512f",
+      "claim_id": "HN-D027-001-005:meaning",
+      "text": "In California, it is unlawful in renting housing to use a financial or income standard that fails to count the combined income of people living together, or planning to live together, the same way it counts the combined income of married persons living together.",
+      "evidence": [
+        {
+          "span_id": "support:0",
+          "text": "the restrictive covenant is repealed or void.\n(m) As used in this section, “race, color, religion, sex, gender, gender identity, gender expression, sexual orientation, marital status, national origin, ancestry, familial status, source of income, disability, veteran or military status, or genetic information,” includes a perception that the person has any of those characteristics or that the person is associated with a person who has, or is perceived to have, any of those characteristics.\n(n) To use a financial or income standard in the rental of housing that fails to account for the aggregate income of persons residing together or proposing to reside together on the same basis as the aggregate income\nof married persons residing together or proposing to reside together.\n(o) (1) In instances in which there is a government rent subsidy, to do either of the following:\n(A) Use a financial or income standard in assessing eligibility for the rental of housing that is not based on the portion of the rent to be paid by the tenant.\n(B) (i) Use a person’s credit history as part of the application process for a rental accommodation without offering the applicant the option, at the applicant’s discretion, of providing lawful, verifiable alternative evidence of the applicant’s reasonable ability to pay\nthe portion of the rent to be paid by the tenant, including, but not limited to, government benefit payments, pay records, and bank statements.\n(ii) If the applicant elects to provide "
+        }
+      ],
+      "extractor": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXuCWWhZfTVNhKXSGyw"
+      },
+      "reviewer": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXucY8yRx6SUZPVuYgD",
+        "reason": "Matches § 12955(n): a financial or income standard in rental housing must treat the aggregate income of persons residing or proposing to reside together on the same basis as married persons. Scope and the 'proposing to reside' qualifier are preserved; no enlarged rights."
+      },
+      "scope": "rule_meaning"
+    },
+    {
+      "team_rule_id": "HN-R2-D067-007-001",
+      "rule_fingerprint": "2d47858d2a1aeb7e195186c10f76cc4ce2330de2577f79df37188b6f9ed28666",
+      "claim_id": "HN-R2-D067-007-001:meaning",
+      "text": "New Jersey state law does not set, govern, or control rents. Municipalities may pass ordinances establishing rent control or rent leveling, which locally created boards enforce. Whether any cap applies therefore depends on the local ordinance. Some units, such as newly constructed multiple dwellings, may be exempt.",
+      "evidence": [
+        {
+          "span_id": "support:0",
+          "text": "delinquency or late charge may be assessed \nduring the grace period. Any landlord who fails  to allow this grace period may be criminally \nprosecuted as a disorderly person (N.J.S.A. 2A:42-6.1 to -6.3). \nRent Control/Rent Increases \n The State of New Jersey has no laws that establish, govern or control rents. Municipalities \nmay pass an ordinance establishing rent control or rent leveling. Locally created boards enforce \nthese ordinances. Rent control ordinances have been upheld as a val id exercise of the municipal \npolice power where there is a housing shortage (Iganamort v. Borough of Fort Lee , 120 N.J. \nSuper. 286 (1973); Helmsley v. Borough of Fort Lee, 78 N.J. 200 (1978); Orange Taxpayers \nCouncil, Inc. v. City of Orange, 83 N.J. 246 (1980)) \n Under the Newly Constructed Multiple Dwellings Law ( N.J.S.A. 2A:42 -84.5), newly \nconstructed multiple dwellings shall be exempt from any local rent control ordinances for a period \nof 30 years following completion of construction of the building. Rent s that are subsidized by \ngovernmental funding may also be exempt from local rent control ordinances. A tenant may \ncontact the Rent Control Board or municipal clerk in their town to find out if their rental unit is \ncovered by a rent control or rent leveling ordinance.  \nAlthough the State of New Jersey does not have any laws that establish, govern, or control \nrents, a landlord can increase rents if they follow certain procedures. A landlord cannot raise the \nrent mid-lease "
+        }
+      ],
+      "extractor": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXuCWWhZfTVNhKXSGyw"
+      },
+      "reviewer": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXucY8yRx6SUZPVuYgD",
+        "reason": "Faithful to the DCA text: no state law sets or controls rents, municipalities may adopt rent control or leveling ordinances enforced by local boards, and newly constructed multiple dwellings may be exempt. Any cap depends on the local ordinance, which is hedged appropriately."
+      },
+      "scope": "rule_meaning"
+    },
+    {
+      "team_rule_id": "HN-R2-D067-006-003",
+      "rule_fingerprint": "fa2d0b3a23d08d657b65e5296294f3b8dadc5a41c23ed528254c693f2e8b521d",
+      "claim_id": "HN-R2-D067-006-003:meaning",
+      "text": "If a landlord denies a rental application because of a credit report, the landlord must give the applicant the name, address, and telephone number of the credit reporting or tenant screening agency that supplied the negative report.",
+      "evidence": [
+        {
+          "span_id": "support:0",
+          "text": "may seek a temporary restraining order to \nprohibit the tenant from leaving the jurisdiction of the court (Court Rule 4:51-5).  \nConsumer Fraud Protection \n Deception, fraud, misrepresentation, or knowing failure or refusal to provide important \ninformation in connection with the sale or advertisement of real estate is illegal in New Jersey \n(N.J.S.A. 56:8-2). An aggrieved consumer may sue for triple damages plus attorney’s fees for \nconsumer fraud ( N.J.S.A. 56:8 -19). A tenant may contact the Department of Law and Public \nSafety, Division of Consumer Affairs, Office of Consumer Protection, 124 Halsey Street, Newark, \nNew Jersey 07101, (973) 504 -6200, https://www.njconsumeraffairs.gov for further information \nconcerning the Consumer Fraud Act. \nCredit Checks and Background Checks \n Landlords may access credit reports for prospective tenants from credit bureaus or tenant \nscreening agencies. The landlord may use the information provided in deciding whether to approve \nor deny an applicant. If a tenant’s  application is denied due their credit report, the landlord must \nprovide the tenant with the name, address, and telephone number of the credit reporting or \nscreening agency that supplied the negative report (15 U.S.C.A. § 1681m). The landlord is allowed \nto charge the tenant for the cost of the report. The landlord may also request reasonable rental \napplication fees or employment verification. For more information about the Fair Credit Reporting \nAct, call toll -free 1 "
+        }
+      ],
+      "extractor": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXuCWWhZfTVNhKXSGyw"
+      },
+      "reviewer": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXucY8yRx6SUZPVuYgD",
+        "reason": "Matches the source: if the application is denied due to the credit report, the landlord must provide the name, address and telephone number of the agency that supplied the negative report. The condition and actor are preserved."
+      },
+      "scope": "rule_meaning"
+    },
+    {
+      "team_rule_id": "HN-R2-D067-011-006",
+      "rule_fingerprint": "b281e69e175bffe4104f618f06de37244a50fa660a7eb1b8fe219c8de89423b4",
+      "claim_id": "HN-R2-D067-011-006:meaning",
+      "text": "In New Jersey, a landlord or anyone acting for the landlord may not force a tenant out without a court judgment, such as by entering without permission, changing or padlocking locks, or shutting off utilities. If the landlord still refuses to readmit the tenant after a police warning, the landlord may be charged with disorderly conduct.",
+      "evidence": [
+        {
+          "span_id": "support:0",
+          "text": "signed by the landlord and tenant. \nA tenant may ask the court for permission to stay in the premises due to special \ncircumstances that moving may cause. This action is a stay of eviction. If permission is granted, \nthe tenant may not stay in the premises for more than one year, unless there is an agreed upon \nextension between landlord and tenant . All rent due ordinarily must be paid for permission to be \ngranted by the court (N.J.S.A. 2A:18-59.1).   \n \n \n \n34 \n \n \n \n“Self-help” Evictions  \nSelf-help evictions occur when the landlord or someone acting on the landlord’s behalf \nenters into the dwelling unit without the permission of the tenant and without a judgment from the \nCourt and forces the tenant to move. A lockout occurs when the landlord padlocks the door or \nchanges the locks while the tenant are not home and then refuses to allow the tenant back into the \npremises. A lockout also occurs when the landlord shuts off the utilities in attempt to force the \ntenant to move. Self-help evictions, or lockouts, made by the landlord are illegal in New Jersey. \nIf a landlord attempts a self -help eviction or lockout, the tenant should call the police. If \nthe landlord refuses to allow the tenant back into the premises after  the police have warned the \nlandlord about the illegal procedures, the landlord may be charged with disorderly conduct.  \n“Self-help” eviction is entry into a dwelling unit and removal of tenants without their \nconsent or without a judgment from a "
+        }
+      ],
+      "extractor": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXvNAicHBWhmjnh3Ru1"
+      },
+      "reviewer": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXvmj3vCYBhaMS8x8YH",
+        "reason": "Faithful to the source on actor, the three prohibited acts, the court-judgment condition, and the permissive 'may be charged' after a police warning."
+      },
+      "scope": "rule_meaning"
+    },
+    {
+      "team_rule_id": "HN-R2-D052-003-006",
+      "rule_fingerprint": "e3a5180d68b7ce2de5301f5fb66598007792efb7238dceae52c945b127bff803",
+      "claim_id": "HN-R2-D052-003-006:meaning",
+      "text": "Under Massachusetts' security deposit and rental advance law (G.L. c. 186, § 15B), any lease provision that conflicts with that section, and any waiver of it by a tenant or prospective tenant, is against public policy and void and unenforceable. The section does not apply to vacation or recreational rentals of 100 days or less.",
+      "evidence": [
+        {
+          "span_id": "support:0",
+          "text": "crediting of the rental advance, and payment of all interest thereon to the tenant in accordance with the provisions of this section;  provided, however, that if the tenant still occupies the dwelling unit for which the rental advance was given, said successor in interest may satisfy such obligation by granting the tenant free use and occupancy of the dwelling unit for a period of time equivalent to the period of time covered by the rental advance.  The liability imposed by this subsection shall not apply to a city or town which acquires title to property pursuant to chapter sixty or to a foreclosing mortgagee or a mortgagee in possession which is a financial institution chartered by the commonwealth or by the United States.\n(8) Any provision of a lease which conflicts with any provision of this section and any waiver by a tenant or prospective tenant of any provision of this section shall be deemed to be against public policy and therefore void and unenforceable.\n(9) The provisions of this section shall not apply to any lease, rental, occupancy or tenancy of one hundred days or less in duration which lease or rental is for a vacation or recreational purpose.\n×\nRegister for MyLegislature\nRegister With An Existing Account\nSign in\nwith Facebook\nSign in\nwith Google\nRegister With Your Email Address\nEmail Address\nPassword\nConfirm Password\nRegister\nRegistering...\nAlready have an account? Sign in here.\nForgot Password?\n×\nSign in to MyLegislature\nSign In With Your Facebook or "
+        }
+      ],
+      "extractor": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXvNAicHBWhmjnh3Ru1"
+      },
+      "reviewer": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXvmj3vCYBhaMS8x8YH",
+        "reason": "Accurately states the voiding of conflicting lease provisions and waivers in subsection (8), and the vacation/recreational exclusion for stays of 100 days or less in subsection (9)."
+      },
+      "scope": "rule_meaning"
+    },
+    {
+      "team_rule_id": "HN-D058-001-003",
+      "rule_fingerprint": "ff848db9ddc4080e79aa2b0e1ee26b1fb2ca4f31e5c13465a2fe3972a1795890",
+      "claim_id": "HN-D058-001-003:meaning",
+      "text": "In Massachusetts, a court with summary process jurisdiction, including the Boston municipal court department, may not accept a writ, summons or complaint for filing in a residential nonpayment-of-rent eviction without proof that the form required by that section was delivered.",
+      "evidence": [
+        {
+          "span_id": "support:0",
+          "text": "subsection (a) shall be made available in the 5 most common languages spoken in the commonwealth in addition to English. No court having jurisdiction over an action for summary process pursuant to chapter 239, including the Boston municipal court department, shall, in an eviction for nonpayment of rent for a residential dwelling unit, accept for filing a writ, summons or complaint without proof of delivery of the form required under this section.\n×\nRegister for MyLegislature\nRegister With An Existing Account\nSign in\nwith Facebook\nSign in\nwith Google\nRegister With Your Email Address\nEmail Address\nPassword\nConfirm Password\nRegister\nRegistering...\nAlready have an account? Sign in here.\nForgot Password?\n×\nSign in to MyLegislature\nSign In With Your Facebook or Google+ Account\nSign in\nwith Facebook\nSign in\nwith Google\nSign In With Your MyLegislature Account\nEmail*\nPassword*\nForgot Password?\nSign In\nSigning In...\nNot Registered? Click here.\nLearn More Here! »\n×\nForgot Password\nPlease enter your email address.\nIf there is an account associated with that address, a password reset link will be mailed to you.\nEmail Address\nReset Password\nProcessing...\nCancel\n×\nSign In Required\nThis feature is exclusive to users of\nMyLegislature\nSign In\nRegister\n×\nSearch The Legislature\nSearch the Legislature\nSearch the Legislature\nSearch"
+        }
+      ],
+      "extractor": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXvNAicHBWhmjnh3Ru1"
+      },
+      "reviewer": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXvmj3vCYBhaMS8x8YH",
+        "reason": "Matches the source: courts with summary process jurisdiction, including the Boston municipal court department, may not accept the filing in a residential nonpayment eviction without proof of delivery of the required form."
+      },
+      "scope": "rule_meaning"
+    },
+    {
+      "team_rule_id": "HN-D049-002-006",
+      "rule_fingerprint": "2db166214338d1e0e5028bc4441213b6ed97d671785a67dd7abef8a52ffbacfa",
+      "claim_id": "HN-D049-002-006:meaning",
+      "text": "In Massachusetts, anyone furnishing credit, services or rental accommodations may not discriminate against a person who receives federal, state or local public assistance (including medical assistance) or a housing subsidy (including rental assistance or supplements). This covers discrimination because of that status or because of any requirement of the assistance or subsidy program.",
+      "evidence": [
+        {
+          "span_id": "support:0",
+          "text": "more types of criminal offenses; or (ii) the employer or an affiliate of such employer is subject to an obligation imposed by any federal or state law or regulation not to employ persons, in either 1 or more positions, who have been convicted of 1 or more types of criminal offenses.\n9A. For an employer himself or through his agent to refuse, unless based upon a bonafide occupational qualification, to hire or employ or to bar or discharge from employment any person by reason of his or her failure to furnish information regarding his or her admission, on one or more occasions, voluntarily or involuntarily, to any public or private facility for the care and treatment of mentally ill persons, provided that such person has been discharged from such facility or facilities and can prove by a psychiatrist's certificate that he is mentally competent to perform the job or the job for which he is applying. No application for employment shall contain any questions or requests for information regarding the admission of an applicant, on one or more occasions, voluntarily or involuntarily, to any public or private facility for the care and treatment of mentally ill persons, provided that such applicant has been discharged from such public or private facility or facilities and is no longer under treatment directly related to such admission.\n10. For any person furnishing credit, services or rental accommodations to discriminate against any individual who is a recipient of federal, state, or "
+        },
+        {
+          "span_id": "support:1",
+          "text": "local public assistance, including medical assistance, or who is a tenant receiving federal, state, or local housing subsidies, including rental assistance or rental supplements, because the individual is such a recipient, or because of any requirement of such public assistance, rental assistance, or housing subsidy program.\n11. For the owner, sublessees, real estate broker, assignee or managing agent of publicly assisted or multiple dwelling or contiguously located housing accommodations or other covered housing accommodations, or other person having the right of ownership or possession or right to rent or lease or sell such accommodations, or any agent or employee of such person or organization of unit owners in a condominium or housing cooperative, to refuse to rent or lease or sell or otherwise to deny to or withhold from any person such accommodations because such person has a child or children who shall occupy the premises with such person or to discriminate against any person in the terms, conditions, or privileges of such accommodations or the acquisition thereof, or in the furnishing of facilities and services in connection therewith, because such person has a child or children who occupy or shall occupy the premises with such person; provided, however, that nothing herein shall limit the applicability of any local, state, or federal restrictions regarding the maximum number of persons permitted to occupy a dwelling. When the commission or a court finds that "
+        }
+      ],
+      "extractor": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXvNAicHBWhmjnh3Ru1"
+      },
+      "reviewer": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXvmj3vCYBhaMS8x8YH",
+        "reason": "The two spans together support the covered persons, the protected classes (public assistance and housing subsidies), and the 'because of status or program requirement' basis."
+      },
+      "scope": "rule_meaning"
+    },
+    {
+      "team_rule_id": "HN-D081-001-001",
+      "rule_fingerprint": "a1bdbe987e8a5b92d260f449db32bafab80240e20d06c61c4e9062a313ce13c0",
+      "claim_id": "HN-D081-001-001:meaning",
+      "text": "Since October 14, 2024, San Francisco's Rent Ordinance § 37.10C has prohibited selling or using algorithmic devices to set rents or manage occupancy for residential units. These are software tools that analyze nonpublic competitor rental data to recommend rents for vacant units. A tenant or the City Attorney may bring a civil action if they believe an entity is violating the law.",
+      "evidence": [
+        {
+          "span_id": "support:0",
+          "text": "New law prohibits algorithmic devices used to set rents in San Francisco | SF.gov\nSkip to main content\nnews\nNew law prohibits algorithmic devices used to set rents in San Francisco\nRent Board\nNew law prohibits the sale or use of algorithmic devices to set rents or manage occupancy levels for residential units in San Francisco.\nOctober 16, 2024\nLegislation\nadding Section 37.10C to the Rent Ordinance went into effect on October 14, 2024. The law prohibits the sale or use of algorithmic devices to set rents or manage occupancy levels for residential units in San Francisco.\nThe term “algorithmic device” means a device such as a software program that uses algorithms to analyze nonpublic competitor rental data for the purposes of providing a landlord recommendations on what rent to charge for a vacant unit. The law prohibits the sale or use of such algorithmic devices and allows a tenant or the City Attorney to bring a civil action if they believe an entity is in violation of the law."
+        }
+      ],
+      "extractor": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXvNAicHBWhmjnh3Ru1"
+      },
+      "reviewer": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXvmj3vCYBhaMS8x8YH",
+        "reason": "Effective date, prohibition scope, definition of algorithmic device, and the civil action by a tenant or the City Attorney 'if they believe' a violation are all faithful to the source."
+      },
+      "scope": "rule_meaning"
+    },
+    {
+      "team_rule_id": "HN-D012-001-001",
+      "rule_fingerprint": "26dca30f93bba278eaebb33fa97e4b8ec382a1c40f5dac08b8aeb2b89d11da6e",
+      "claim_id": "HN-D012-001-001:meaning",
+      "text": "In Boston, it is illegal to discriminate in renting, buying, selling, or financing housing based on rental assistance, such as a Section 8 voucher. A landlord saying they don't accept rental assistance (Section 8, disability, or veterans vouchers) is listed as an example of housing discrimination.",
+      "evidence": [
+        {
+          "span_id": "support:0",
+          "text": "can learn more about federal programs authorized\nto investigate housing discrimination through the\nUS Department of Housing and Urban Development.\nStill have questions? Contact:\nFair Housing and Equity\n617-635-2500\nsend an email\n1 City Hall Square\nRoom 966\nBoston\n,\nMA\n02201-2041\nUnited States\nLaws and discrimination\nOur commission makes sure property owners don't discriminate against tenants or buyers.\nIn the City of Boston, it’s illegal to discriminate when renting, buying, selling, or securing financing for any housing.\nYou can’t discriminate someone based on their:\nRace\nColor\nReligion\nDisability\nNational Origin\nAncestry\nSex\nGender Identity\nGender Expression\nAge\nSexual Orientation\nMarital Status\nRental Assistance\n*\nFamily Status\n**\nMilitary Status\n*\nFor example renters using Section 8 voucher\n**\nFor example, a landlord can’t discriminate against someone if they have children\nLearn who else is protected by the\nFair Housing Act\n.\nWhat is housing discrimination?\nDiscrimination comes in many forms. Some examples of housing discrimination include:\nThe landlord tells you they don't accept rental assistance. This includes Section\n8 vouchers, social security disability vouchers, and veterans vouchers.\nYou are told you should or shouldn't live in certain neighborhoods based on your race, religion, or disability.\nThe property owner tells you the apartment has been rented, but you later see it listed again.\nYou were told your family can't rent a property because there is lead paint.\n"
+        }
+      ],
+      "extractor": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXwUYUUEoS4TCxjhUfZ"
+      },
+      "reviewer": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXwpw4pjKCJBz2gJuVR",
+        "reason": "Matches the source: rental assistance is a protected class in Boston, and a landlord saying they don't accept vouchers is listed as an example of discrimination. No enlargement of rights."
+      },
+      "scope": "rule_meaning"
+    },
+    {
+      "team_rule_id": "HN-D007-001-007",
+      "rule_fingerprint": "792e2f24cd2d23f0bb00b27e4fe61d092991ef4a3e8be8908315060c6498d0e2",
+      "claim_id": "HN-D007-001-007:meaning",
+      "text": "As described by the Berkeley Rent Board, starting January 1, 2025, a landlord who deducts for repairs from a tenant's security deposit must provide proof that the necessary repairs were completed.",
+      "evidence": [
+        {
+          "span_id": "support:0",
+          "text": "statement itemizing the amount of and and purpose for any security deposit deductions, accompanied by copies of documents showing charges incurred and deducted by the landlord to repair or clean the premises, including a copy of any bill, invoice, or receipt for materials or supplies deductions. The landlord must also return any remaining portion of the security deposit. Starting January 1, 2025, landlords must provide proof that necessary repairs were completed.\nStarting April 1, 2025, landlords must take photographs of a unit after regaining possession, but before any repairs or cleaning for which the landlord intends to make a deduction from the security deposit. These photos and a written explanation of the cost of the repairs/cleaning must be given to the tenant along with the itemized statement.\nSecurity deposit interest\nFor tenancies in units fully or partially covered by Berkeley's Rent Ordinance, landlords must pay tenants interest on their security deposit at the end of each year and a prorated amount if the tenant moves out before the end of the year. See our\nSecurity Deposit Interest & Calculator page\nfor more information.\nRelated Documents\nTemplate Letter Notifying Tenant of Right to Walk-through Inspection\n(55.22 KB)\nTemplate Letter Notifying Tenants of Results of Walk-through Inspection\n(127.9 KB)\nNews\nBerkeley Rent Board to Host Inaugural Landlord Resource Fair on July 22\nUPDATED: Rent Board Adopts to Extend Amnesty Period for Units Newly Required to Register "
+        }
+      ],
+      "extractor": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXwUYUUEoS4TCxjhUfZ"
+      },
+      "reviewer": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXwpw4pjKCJBz2gJuVR",
+        "reason": "Faithfully states the January 1, 2025 start date and the requirement to provide proof of completed repairs when deducting for repairs. It is attributed to the Berkeley Rent Board's description, as in the rule's citation."
+      },
+      "scope": "rule_meaning"
+    },
+    {
+      "team_rule_id": "HN-D005-001-006",
+      "rule_fingerprint": "413d7217b2b64c8c56123d3ba6f362e38bfbdfc07afc4b682eb39a802fb3a737",
+      "claim_id": "HN-D005-001-006:meaning",
+      "text": "Berkeley's Chapter 13.78 (tenant screening and related fee rules) applies to all residential rental agreements, whatever the lease says. Any term in an existing rental agreement or lease that violates the chapter is unenforceable.",
+      "evidence": [
+        {
+          "span_id": "support:0",
+          "text": "purchase a consumer credit report and to validate, review, or otherwise process an application, the owner must provide, either in the rental application or in a separate disclosure before receiving the fee, a clear and conspicuous tenant screening fee rights statement and a statement of the maximum fee cap permitted under\nCalifornia Civil Code Section 1950.6(b)\n.\nThe “Tenant Screening Fee Rights Statement” shall mean the following statement or a substantially similar statement:\n\"Pursuant to California law you have tenant screening fee rights, including the right to a copy of your consumer credit report if one is obtained with your screening fee, a refund of any unused portion of the fee and a receipt of the costs of the screening. For more information about your rights, please visit [URL to be provided by City].\"\n*This page will be updated once the URL is provided by the City.\nProhibition of non-refundable application fees associated with existing tenancies (BMC 13.78.016)\nAn owner of residential rental property (or the owner’s agent) cannot charge a non-refundable fee to any existing tenant for the purpose of renewing a tenancy, in whole or in part, including any fee associated with the departure of a roommate or to request to add or replace a roommate in a pre-existing household.\nApplicability to Existing Rental Agreements (BMC 13.78.018)\nChapter 13.78 applies to all residential rental agreements regardless of any contractual language in any rental agreement or lease to "
+        },
+        {
+          "span_id": "support:1",
+          "text": "the contrary. Any provision of an existing rental agreement or lease that violates the provisions of this chapter are unenforceable.\nNews\nBerkeley Rent Board to Host Inaugural Landlord Resource Fair on July 22\nUPDATED: Rent Board Adopts to Extend Amnesty Period for Units Newly Required to Register Under Measure BB\nNeed Help in Your Language? Visit Our New Language Access Services Page\nUPDATED: Registration Fees for Fiscal Year (FY) 2026-2027\nMore News\nRent Board Housing Counselor\nEmail:\nrent@berkeleyca.gov\nPhone:\n(510) 981-7368 (RENT) Ext. 1\nRelated BMC\nMunicipal Code 13.78"
+        }
+      ],
+      "extractor": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXwUYUUEoS4TCxjhUfZ"
+      },
+      "reviewer": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXwpw4pjKCJBz2gJuVR",
+        "reason": "Chapter 13.78 applies to all residential rental agreements regardless of contrary lease language, and violating terms in existing agreements are unenforceable. Both parts are covered by the two spans."
+      },
+      "scope": "rule_meaning"
+    },
+    {
+      "team_rule_id": "HN-SUP-P005-002",
+      "rule_fingerprint": "837fba1ece77da67112f8ab5e43ba827927ce1c590125b34771a2046cfb5bbed",
+      "claim_id": "HN-SUP-P005-002:meaning",
+      "text": "Under Hoboken City Code § 158-2 (Article II, adopted 7-9-2025 by Ord. No. B-781), landlords who rent a residential dwelling unit in Hoboken may not engage in \"price fixing using algorithmic pricing.\" A residential dwelling unit means any primary residence, excluding medical/long-term care and detention facilities, so not every rental property is covered. The ban covers using software, algorithms, or data-sharing platforms to collect and analyze nonpublic competitor information from other real estate lessors in order to coordinate, recommend, or implement rental prices, lease terms, or occupancy levels among competing lessors. Nonpublic competitor information is information such as prices, supply levels, security deposits, ideal occupancy levels, lease termination and renewal dates, or other material terms that is less than 365 days old and not widely and readily available to the public at no cost; older or freely available information is outside that definition. The Division of Housing or an aggrieved private citizen may bring alleged violations in Hoboken Municipal Court. On conviction, penalties are one or more of: penalties under N.J.S.A. 40:49-5, a fine up to $2,000, or community service up to 90 days. The supplied evidence does not state a separate effective date.",
+      "evidence": [
+        {
+          "span_id": "support:1",
+          "text": "\n\n\n\n\n\nA. \n\nProhibited conduct. Landlords who rent any residential dwelling unit (defined as any primary residence excluding medical/long-term care or detention facilities) in the City of Hoboken are prohibited from price fixing using algorithmic pricing. For purposes of this chapter, \"price fixing using algorithmic pricing\" shall be defined as the use of software, algorithms, or data-sharing platforms to collect and analyze nonpublic competitor information from other real estate lessors in order to coordinate, recommend, or implement rental prices, lease terms, or occupancy levels for residential dwelling units among competing real estate lessors. For purposes of this chapter, \"nonpublic competitor information\" shall be defined as information including, but not limited to, prices, supply levels, security deposits, ideal occupancy levels, lease contract termination, renewal dates of residential dwelling units or any other material terms that is less than 365 days old and is not widely and readily available to the public at no cost.\n\nB. \n\nEnforcement.\n\n(1) \n\nEnforcement. Alleged violations of this chapter may be brought by the Division of Housing, or any private citizen alleging to be aggrieved, to the Hoboken Municipal Court for adjudication.\n\n\nC. \n\nPenalties. Any person violating the requirements set forth in this chapter shall, upon conviction, be subject to one or more of the following penalties:\n\n(1) \n\nPenalties as prescribed under N.J.S.A. 40:49-5; or\n\n(2) \n\nBy a fine "
+        },
+        {
+          "span_id": "support:2",
+          "text": "not exceeding $2,000; or\n\n(3) \n\nBy a period of community service not exceeding 90 days.\n\n\n                \n      \n  \n\n            \n          \n        \n            \n\n    \n      \n\n        \n\n          By using eCode360 you agree to be legally bound by the Terms of Use and Privacy Policy.\n        \n        \n\n              \n        \n      \n    \n          \n\n          \n\n      \n      \n        \n\n            \n          \n  \n\n        \n    \n\n  \n\n"
+        },
+        {
+          "span_id": "rule-quote",
+          "text": "shall be required to make the following disclosures to existing tenants either in the lease upon renewal (must be clearly indicated on the first page) or on a form provided by the Hoboken Division of Housing prior to the increase being implemented:\n\n(1) \n\nAn itemization of the costs associated with the rent increase;\n\n(2) \n\nA statement as to whether a rent algorithm was used to determine the rent increase;\n\n(3) \n\nA statement notifying the tenant of their right to take legal action (at their own expense) if they believe that the proposed rent increase is unconscionable or otherwise not in accordance with local or state law; and\n\n(4) \n\nThe contact information for the Hoboken Division of Housing and a statement indicating that tenants may reach out to the Hoboken Division of Housing and/or Tenant Advocate with questions or concerns.\n\n\nB. \n\nAny landlord who pleads guilty to or is found guilty of failing to provide the disclosures to tenants as provided herein shall be subject to a fine not exceeding $1,000 per incident.\n\n                \n                \n  \n\n    \n      \n    \n    \n  \n\n    \n    \n      Article II\n    \n    \nAlgorithmic Rent Fixing in Rental Housing Market    \n    \n  \n      \n  \n                \n        \n\n        \n\n\n\n\n\n[Adopted 7-9-2025 by Ord. No. B-781]\n                \n                \n  \n\n    \n      \n    \n    \n  \n\n    \n    \n      § 158-2\n    \n    \nAlgorithmic rent fixing in rental housing market prohibited.    \n    \n  \n      \n  \n                \n        \n\n        \n"
+        },
+        {
+          "span_id": "support:0",
+          "text": "shall be required to make the following disclosures to existing tenants either in the lease upon renewal (must be clearly indicated on the first page) or on a form provided by the Hoboken Division of Housing prior to the increase being implemented:\n\n(1) \n\nAn itemization of the costs associated with the rent increase;\n\n(2) \n\nA statement as to whether a rent algorithm was used to determine the rent increase;\n\n(3) \n\nA statement notifying the tenant of their right to take legal action (at their own expense) if they believe that the proposed rent increase is unconscionable or otherwise not in accordance with local or state law; and\n\n(4) \n\nThe contact information for the Hoboken Division of Housing and a statement indicating that tenants may reach out to the Hoboken Division of Housing and/or Tenant Advocate with questions or concerns.\n\n\nB. \n\nAny landlord who pleads guilty to or is found guilty of failing to provide the disclosures to tenants as provided herein shall be subject to a fine not exceeding $1,000 per incident.\n\n                \n                \n  \n\n    \n      \n    \n    \n  \n\n    \n    \n      Article II\n    \n    \nAlgorithmic Rent Fixing in Rental Housing Market    \n    \n  \n      \n  \n                \n        \n\n        \n\n\n\n\n\n[Adopted 7-9-2025 by Ord. No. B-781]\n                \n                \n  \n\n    \n      \n    \n    \n  \n\n    \n    \n      § 158-2\n    \n    \nAlgorithmic rent fixing in rental housing market prohibited.    \n    \n  \n      \n  \n                \n        \n\n        \n"
+        }
+      ],
+      "extractor": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgaYZNtVkrU6ZtEoq4FQ"
+      },
+      "reviewer": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgaZGLzCXMidw4Dbdp2F",
+        "reason": "Prose retains primary-residence definition and medical/long-term care and detention exclusions, the 365-day and public-availability limits on nonpublic competitor information, the enforcement actors and court, and all three alternative penalties. It correctly says no separate effective date is stated, with only the 7-9-2025 adoption by Ord. B-781. It is not a disclosure checklist, so the Hoboken disclosure requirements do not apply."
+      },
+      "scope": "rule_meaning"
+    },
+    {
+      "team_rule_id": "HN-SUP-V4S002-002",
+      "rule_fingerprint": "d6625794b31c59e3a37faf915cceb0d0ac3695a1b0c85d67fa6c9f890619a69b",
+      "claim_id": "HN-SUP-V4S002-002:meaning",
+      "text": "Under Jersey City Code § 218-12(2)(b), as carried through Ord. 25-076 (adopted Jul 16 2025, approved Jul 17 2025), a service provider may not facilitate an agreement not to compete among real estate lessors on any aspect of residential dwelling units, including rental pricing, fees, or other rental terms. A service provider is a person that performs a coordination function for a real estate lessor or rentor: collecting nonpublic competitor information, analyzing or processing it with computational tools, and recommending rental prices, lease terms, or occupancy levels. The coordination definition exempts owners of multiple properties for actions related exclusively to properties controlled by the same rental property owner, and licensed real estate agents operating in accordance with state regulations are not included as service providers. Residential dwelling units are units intended as a person's primary residence, excluding inpatient medical care, licensed long-term care, and detention or correctional facilities. The supplied evidence gives no exact effective date.",
+      "evidence": [
+        {
+          "span_id": "rule-quote",
+          "text": "AN ORDINANCE AMENDING CHAPTER 218 (MULTIPLE DWELLINGS) SECTION 12 (PREVENTING ALGORITHMIC RENT-FIXING IN THE RENTAL HOUSING MARKET), OF THE CODE OF ORDINANCES OF THE CITY OF JERSEY CITY.\nWHEREAS; the Municipal Council passed ordinance Ord. 25-057 at the May 21st 2025, Council meeting; and\nWHEREAS, the Council wishes to clarify the language to ensure the ordinance is as strong as possible.\nNOW, THEREFORE, BE IT ORDAINED BY THE CITY COUNCIL OF THE CITY OF JERSEY CITY THAT: that Chapter 218 (Fees and Charges) of the Municipal Code shall be amended:\n§218-12 Preventing Algorithmic Rent Fixing in the Rental Housing Market:\n1. No Change\n2. Unlawful Conduct\n1. It is unlawful for any real estate lessor, agent, or subcontractor thereof, to subscribe to, contract with, or otherwise exchange anything of value in return for or otherwise utilize the services of a Service Provider.\n2. No service provider shall facilitate an agreement not to compete among real estate lessors with respect to any aspect of residential dwelling units, including rental pricing, fees, or any other rental terms.\n\n\nRECORD OF FINAL COUNCIL VOTE – Jul 16 2025\nRIDLEY AYE SALEH AYE DEGISE AYE\nHULINGS AYE SOLOMON AYE RIVERA AYE 9-0\nBOGGIANO AYE GILMORE AYE WATTERMAN, PRES. AYE\nAdopted on second and final reading after hearing on Jul 16 2025\nThis is to certify that the foregoing Ordinance was adopted by the Municipal Council at its meeting on Jul 16 2025\nSteven M. Fulop, Mayor\nDate to Mayor: Jul 17 2025\nApproved: Jul 17 "
+        },
+        {
+          "span_id": "support:0",
+          "text": "AN ORDINANCE AMENDING CHAPTER 218 (MULTIPLE DWELLINGS) SECTION 12 (PREVENTING ALGORITHMIC RENT-FIXING IN THE RENTAL HOUSING MARKET), OF THE CODE OF ORDINANCES OF THE CITY OF JERSEY CITY.\nWHEREAS; the Municipal Council passed ordinance Ord. 25-057 at the May 21st 2025, Council meeting; and\nWHEREAS, the Council wishes to clarify the language to ensure the ordinance is as strong as possible.\nNOW, THEREFORE, BE IT ORDAINED BY THE CITY COUNCIL OF THE CITY OF JERSEY CITY THAT: that Chapter 218 (Fees and Charges) of the Municipal Code shall be amended:\n§218-12 Preventing Algorithmic Rent Fixing in the Rental Housing Market:\n1. No Change\n2. Unlawful Conduct\n1. It is unlawful for any real estate lessor, agent, or subcontractor thereof, to subscribe to, contract with, or otherwise exchange anything of value in return for or otherwise utilize the services of a Service Provider.\n2. No service provider shall facilitate an agreement not to compete among real estate lessors with respect to any aspect of residential dwelling units, including rental pricing, fees, or any other rental terms.\n\n\nRECORD OF FINAL COUNCIL VOTE – Jul 16 2025\nRIDLEY AYE SALEH AYE DEGISE AYE\nHULINGS AYE SOLOMON AYE RIVERA AYE 9-0\nBOGGIANO AYE GILMORE AYE WATTERMAN, PRES. AYE\nAdopted on second and final reading after hearing on Jul 16 2025\nThis is to certify that the foregoing Ordinance was adopted by the Municipal Council at its meeting on Jul 16 2025\nSteven M. Fulop, Mayor\nDate to Mayor: Jul 17 2025\nApproved: Jul 17 "
+        },
+        {
+          "span_id": "companion:0",
+          "text": "§218-12 Preventing Algorithmic Rent Fixing in the Rental Housing Market:\n1.Definitions\na.The following terms, as used in this ordinance, shall have the following meanings:\ni.“Coordinate” or “coordinating” mean, with respect to a service provider, collecting nonpublic competitor information from real estate lessors; and, collecting of historical or contemporaneous prices, price changes, supply levels, occupancy rates, or lease or rental contract termination and renewal dates of residential dwelling units from two or more real estate lessors or from public databases;\n1.analyzing or processing of the information described in subparagraph (1)(a)(i) using a system, software, or process that uses computation; and\n2.Recommending to any other party rental prices, lease terms, or occupancy levels to a real estate lessorusing the information described in subparagraph (1)(a)(i).\na.This definition exempts owners of multiple properties for actions related exclusively to multiple properties controlled by the same rental property owner; and\n3.Licensed Real Estate Agents are not included in this definition so long as they are operating in accordance with all applicable state regulations.\nii.“Person” means any natural person, corporation, partnership, limited liability company, firm, or association.\niii.“Residential dwelling unit” means any house, apartment, accessory unit, or other unit intended to be used as a person’s primary residence; and does not include inpatient medical care, "
+        },
+        {
+          "span_id": "support:1",
+          "text": "licensed long-term care, and detention or correctional facilities.\niv.“Real estate lessor” means any individual, corporation, partnership, association, joint-stock company, trust, or unincorporated organization that owns real property and leases such property or any portion thereof in the form of a residential dwelling unit.\nv.“Service provider” means any person that performs a coordination function, as defined in Section 1(a)(i)(1) of this Act, for any real estate lessor or rentor.\n1.Licensed Real Estate Agents are not included in this definition so long as they are operating in accordance with all applicable state regulations.\nvi.“Nonpublic Competitor Information” means information, including but not limited to prices, supply levels, security deposits, ideal occupancy levels, lease contract termination, renewal dates of residential dwelling units or any other material lease terms that is less than 365 days old and is not widely and readily available to the public at no cost.\n2.Unlawful Conduct\na.It is unlawful for any real estate lessor, agent, or subcontractor thereof, to subscribe to, contract with, or otherwise exchange anything of value in return for the services of a Service Provider.\nb.No service provider shall facilitate an agreement not to compete among real estate lessors with respect to any aspect of residential dwelling units, including rental pricing, fees, or any other rental terms.\n3.Enforcement\na.Public Enforcement. The Attorney General or any municipal or "
+        }
+      ],
+      "extractor": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgaYZNtVkrU6ZtEoq4FQ"
+      },
+      "reviewer": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgaZGLzCXMidw4Dbdp2F",
+        "reason": "Actor is correctly the service provider. Prose retains the coordination definition, the same-owner multi-property exception, the licensed-agent exclusion, and the primary-residence scope with the care/detention/correctional exclusions. It correctly says no exact effective date is given. The defining passages are in companion:0 and support:1."
+      },
+      "scope": "rule_meaning"
+    },
+    {
+      "team_rule_id": "HN-SUP-P001-002",
+      "rule_fingerprint": "b2f1649cee2d122b7ff9078a9235313600467f097a2cc3bb09d0734ee9d74f41",
+      "claim_id": "HN-SUP-P001-002:meaning",
+      "text": "Under California's new Business and Professions Code section 16729, subsection (b) makes it unlawful for a person to use or distribute a \"common pricing algorithm\" if that person coerces another person to set or adopt a price or commercial term the algorithm recommends for the same or similar products or services in California. A common pricing algorithm is any methodology, including a computer, software, or other technology, used by two or more persons that uses competitor data to recommend, align, stabilize, set, or otherwise influence a price or commercial term. \"Distribute\" includes selling, licensing, providing access to, or otherwise making available, including by subscription. A \"person\" does not include the end consumer of a product or service. Coercion is not the only way to violate the section. Subsection (a) separately makes it unlawful to use or distribute a common pricing algorithm as part of a contract, combination in the form of a trust, or conspiracy to restrain trade. This is a general rule about common pricing algorithms, not a rental-specific ban.",
+      "evidence": [
+        {
+          "span_id": "rule-quote",
+          "text": "of the state. Because the bill would expand the scope of activities prohibited by the Cartwright Act, the violation of which is punishable as a crime, the bill would impose a state-mandated local program.\nThe California Constitution requires the state to reimburse local agencies and school districts for certain costs mandated by the state. Statutory provisions establish procedures for making that reimbursement.\nThis bill would provide that no reimbursement is required by this act for a specified reason.\nDigest Key\n      Vote:\n      MAJORITY  \n      Appropriation:\n      NO  \n      Fiscal Committee:\n      YES  \n      Local Program:\n      YES  \nBill Text\n\n\nThe people of the State of California do enact as follows:\n\n\n\nSECTION 1. Section 16729 is added to the Business and Professions Code, to read:\n\n\n\n\n\n16729. (a) It shall be unlawful for a person to use or distribute a common pricing algorithm as part of a contract, combination in the form of a trust, or conspiracy to restrain trade or commerce in violation of this chapter.\n(b) It shall be unlawful for a person to use or distribute a common pricing algorithm if the person coerces another person to set or adopt a recommended price or commercial term recommended by the common pricing algorithm for the same or similar products or services in the jurisdiction of this state.\n(c) Nothing in this section shall impair or limit the applicability of antitrust laws.\n(d) For purposes of this section, the following definitions apply:\n"
+        },
+        {
+          "span_id": "support:1",
+          "text": "(1) “Antitrust laws” means the provisions of this part.\n(2) “Commercial term” includes, without limitation, any of the following:\n(A) Level of service.\n(B) Availability.\n(C) Output, including quantities of products produced or distributed or the amount or level of service provided.\n(3) “Common pricing algorithm” means any\n\t\t\t\t\t\tmethodology, including a computer, software, or other technology, used by two or more persons, that uses competitor data to recommend, align, stabilize, set, or otherwise influence a price or commercial\n\t\t\t\t\t\tterm.\n(4) “Distribute,” “distribution,” and “distributing” include selling, licensing, providing access to, or otherwise making available by any means, including through a subscription or the sale of a service.\n(5) “Person” has the same meaning as defined in Section 16702 and does not include the end consumer of a product or service. \n(6) “Price” means the amount of money or other thing of value, whether tangible or not, expected, required, or given in payment for any product or service, including compensation paid to an employee or independent contractor for services provided.\n\n\nSEC. 2. Section 16756.1 is added to the Business and Professions Code, to read:\n\n\n\n\n\n16756.1. Notwithstanding any other law, in a complaint for any violation of this chapter, it is sufficient to contain factual allegations demonstrating that the existence of a contract, combination in the form of a trust, or conspiracy to restrain trade or commerce is plausible, and the "
+        }
+      ],
+      "extractor": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011Cfgd728MKR5higPvzhfjH"
+      },
+      "reviewer": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011Cfgd7nzMFbZxgoZqHznpC",
+        "reason": "Subsection (b) coercion, the definitions (common pricing algorithm, distribute, person excluding end consumers) and the separate subsection (a) conspiracy prohibition are accurately stated. The explanation says it is not a rental-specific ban and makes no date claims."
+      },
+      "scope": "rule_meaning"
+    },
+    {
+      "team_rule_id": "HN-R2-D067-006-004",
+      "rule_fingerprint": "07b9bed2efc1320365bd09cb69d9c0188f0a7c7004b5292cb8290737fdb94adc",
+      "claim_id": "HN-R2-D067-006-004:meaning",
+      "text": "New Jersey's Truth in Renting guide, in its credit and background check passage, says a landlord is allowed to charge a prospective tenant for the cost of the credit report. It also says the landlord may request reasonable rental application fees or employment verification. Employment verification is described as something the landlord may request, not as a fee. These are the only fee statements the passage makes, and it does not address anything beyond them.",
+      "evidence": [
+        {
+          "span_id": "rule-quote",
+          "text": "may seek a temporary restraining order to \nprohibit the tenant from leaving the jurisdiction of the court (Court Rule 4:51-5).  \nConsumer Fraud Protection \n Deception, fraud, misrepresentation, or knowing failure or refusal to provide important \ninformation in connection with the sale or advertisement of real estate is illegal in New Jersey \n(N.J.S.A. 56:8-2). An aggrieved consumer may sue for triple damages plus attorney’s fees for \nconsumer fraud ( N.J.S.A. 56:8 -19). A tenant may contact the Department of Law and Public \nSafety, Division of Consumer Affairs, Office of Consumer Protection, 124 Halsey Street, Newark, \nNew Jersey 07101, (973) 504 -6200, https://www.njconsumeraffairs.gov for further information \nconcerning the Consumer Fraud Act. \nCredit Checks and Background Checks \n Landlords may access credit reports for prospective tenants from credit bureaus or tenant \nscreening agencies. The landlord may use the information provided in deciding whether to approve \nor deny an applicant. If a tenant’s  application is denied due their credit report, the landlord must \nprovide the tenant with the name, address, and telephone number of the credit reporting or \nscreening agency that supplied the negative report (15 U.S.C.A. § 1681m). The landlord is allowed \nto charge the tenant for the cost of the report. The landlord may also request reasonable rental \napplication fees or employment verification. For more information about the Fair Credit Reporting \nAct, call toll -free 1 "
+        },
+        {
+          "span_id": "support:0",
+          "text": "may seek a temporary restraining order to \nprohibit the tenant from leaving the jurisdiction of the court (Court Rule 4:51-5).  \nConsumer Fraud Protection \n Deception, fraud, misrepresentation, or knowing failure or refusal to provide important \ninformation in connection with the sale or advertisement of real estate is illegal in New Jersey \n(N.J.S.A. 56:8-2). An aggrieved consumer may sue for triple damages plus attorney’s fees for \nconsumer fraud ( N.J.S.A. 56:8 -19). A tenant may contact the Department of Law and Public \nSafety, Division of Consumer Affairs, Office of Consumer Protection, 124 Halsey Street, Newark, \nNew Jersey 07101, (973) 504 -6200, https://www.njconsumeraffairs.gov for further information \nconcerning the Consumer Fraud Act. \nCredit Checks and Background Checks \n Landlords may access credit reports for prospective tenants from credit bureaus or tenant \nscreening agencies. The landlord may use the information provided in deciding whether to approve \nor deny an applicant. If a tenant’s  application is denied due their credit report, the landlord must \nprovide the tenant with the name, address, and telephone number of the credit reporting or \nscreening agency that supplied the negative report (15 U.S.C.A. § 1681m). The landlord is allowed \nto charge the tenant for the cost of the report. The landlord may also request reasonable rental \napplication fees or employment verification. For more information about the Fair Credit Reporting \nAct, call toll -free 1 "
+        }
+      ],
+      "extractor": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011Cfgd728MKR5higPvzhfjH"
+      },
+      "reviewer": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011Cfgd7nzMFbZxgoZqHznpC",
+        "reason": "The passage allows charging the credit report cost and requesting reasonable application fees or employment verification. Employment verification is not described as a fee, and the explanation limits itself to the passage without any global no-cap claim."
+      },
+      "scope": "rule_meaning"
+    }
+  ],
+  "publication_note": "17 source-audited explanations. Two final model-supported candidates withheld after source audit; canonical rules and eligibility unchanged."
+}

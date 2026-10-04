@@ -63,7 +63,7 @@ function setLoad(message, isError = false) {
 async function init() {
   const params = new URLSearchParams(location.search);
   state.mode = params.get('fixture') === '1' ? 'fixture' : 'production';
-  const manifestPath = state.mode === 'fixture' ? 'fixtures/manifest.json' : 'data/manifest.json';
+  const manifestPath = state.mode === 'fixture' ? 'fixtures/manifest.json' : 'manifest.json';
   $('fixtureBanner').hidden = state.mode !== 'fixture';
   $('modePill').textContent = state.mode === 'fixture' ? 'Fixture · synthetic' : 'Saved engine results';
   try {
@@ -84,7 +84,7 @@ async function init() {
     state.jurisdictions = jurisdictions;
     state.report = report;
     if(state.mode!=='fixture'){
-      const artifact=await fetchJson('data/resident-claims.json',false);
+      const artifact=await fetchJson('resident-claims.json',false);
       if(artifact?.version==='resident-claims-1'&&Array.isArray(artifact.claims)){
         state.residentClaims=artifact.claims;
         try { for(const rule of rules)state.ruleFingerprints.set(rule.team_rule_id,await ResidentLogic.fingerprint(rule)); }
@@ -204,7 +204,7 @@ async function loadSnapshot(asOf) {
     setLoad(state.lookupError, true);
     return true;
   }
-  const manifestUrl = state.mode === 'fixture' ? 'fixtures/manifest.json' : 'data/manifest.json';
+  const manifestUrl = state.mode === 'fixture' ? 'fixtures/manifest.json' : 'manifest.json';
   const [lookupResult, changeResult] = await Promise.allSettled([
     fetchJson(resolveRelative(manifestUrl, snap.lookups_url)),
     fetchJson(resolveRelative(manifestUrl, snap.changes_url))
@@ -380,42 +380,55 @@ function renderRule(entry, rule) {
 function humanStatus(s) {
   return ({applies:'Applies',unknown:'Unknown',superseded:'Superseded',not_yet_effective:'Not yet effective',pending:'Pending',in_force:'In force',failed:'Failed',unavailable:'Unavailable'})[s] || String(s || 'Unavailable').replaceAll('_',' ');
 }
+function evidenceDisclosure(title){
+  const disclosure=el('details','evidence-box evidence-disclosure');disclosure.append(el('summary','',title));return disclosure;
+}
 function openEvidence(entry,rule) {
   const host = $('evidenceContent'); host.replaceChildren();
   const prov = provenanceById(rule.team_rule_id);
   const claim=approvedClaim(rule);
   if(claim){
-    const receipt=el('section','evidence-box');receipt.append(el('h3','','The everyday explanation'),el('p','',claim.text),el('p','eligibility-qualification',ResidentLogic.eligibilityCopy(entry)));
+    const receipt=el('section','evidence-box');receipt.append(el('h3','','The everyday explanation'));
+    if(ResidentLogic.compactClaim(claim).showInline)receipt.append(el('p','',claim.text));
+    else{const full=evidenceDisclosure('Read the full reviewed explanation');full.append(el('p','reviewed-answer',claim.text));receipt.append(full);}
+    receipt.append(el('p','eligibility-qualification',ResidentLogic.eligibilityCopy(entry)));
+    receipt.append(el('p','receipt-citation',rule.citation || 'Citation unavailable'));
+    const passages=evidenceDisclosure('Read the exact passages behind this explanation');
     for(const evidence of claim.evidence){
       let span=null;
       if(evidence.span_id.startsWith('companion:'))span=prov?.authorized_companion_spans?.[Number(evidence.span_id.split(':')[1])];
       else if(evidence.span_id.startsWith('support:'))span=prov?.supporting_spans?.[Number(evidence.span_id.split(':')[1])];
       else span=[...(prov?.supporting_spans||[]),...(prov?.authorized_companion_spans||[])].find(x=>x.id===evidence.span_id);
-      receipt.append(el('p','receipt-span-id',`Supporting passage: ${evidence.span_id} · ${span?.source_doc_id || rule.source_doc_id || 'Source ID unavailable'}`),el('p','quote',evidence.text));
-      const url=safeUrl(span?.source_url || rule.source_url);if(url){const link=el('a','evidence-link','Open this passage’s source');link.href=url;link.target='_blank';link.rel='noopener noreferrer';receipt.append(link);}
+      passages.append(el('p','receipt-span-id',`Supporting passage: ${evidence.span_id} · ${span?.source_doc_id || rule.source_doc_id || 'Source ID unavailable'}`),el('p','quote',evidence.text));
+      const url=safeUrl(span?.source_url || rule.source_url);if(url){const link=el('a','evidence-link','Open this passage’s source');link.href=url;link.target='_blank';link.rel='noopener noreferrer';passages.append(link);}
     }
+    receipt.append(passages);
     receipt.append(el('p','topic-note','Reviewed as an explanation of the rule, not a new check of your household facts.'));host.append(receipt);
   }
   const summary = el('section','evidence-box'); summary.append(el('h3','','What this rule says'));
-  const dl = el('dl','kv'); addKv(dl,'Applicability',humanStatus(entry.result)); addKv(dl,'Source status',humanStatus(rule.status)); addKv(dl,'Effective date',rule.effective_date,'Not verified'); addKv(dl,'As-of date',state.lookups?.as_of || $('snapshotSelect').value); addKv(dl,'Citation',rule.citation); addKv(dl,'Requirement',rule.requirement); addKv(dl,'Coverage',structuredValue(rule.coverage_conditions)); addKv(dl,'Exemptions',rule.exemptions); summary.append(dl); host.append(summary);
-  const quote = el('section','evidence-box'); quote.append(el('h3','','Exact rule quotation')); quote.append(el('p','quote',rule.quoted_span || 'Exact quotation unavailable.')); host.append(quote);
-  const source = el('section','evidence-box'); source.append(el('h3','','Source & provenance'));
+  const dl = el('dl','kv'); addKv(dl,'Applicability',humanStatus(entry.result)); addKv(dl,'Source status',humanStatus(rule.status)); addKv(dl,'Effective date',rule.effective_date,'Not verified'); addKv(dl,'As-of date',state.lookups?.as_of || $('snapshotSelect').value); addKv(dl,'Citation',rule.citation);addKv(dl,'Source retrieved',displayDate(prov?.retrieved_at),'Not verified'); summary.append(dl);
+  const visibleSource=safeUrl(rule.source_url);if(visibleSource){const a=el('a','evidence-link','Open the cited source');a.href=visibleSource;a.target='_blank';a.rel='noopener noreferrer';summary.append(a);}
+  const condition=evidenceDisclosure('Read the full rule summary, coverage and exceptions');const cdl=el('dl','kv');addKv(cdl,'Requirement',rule.requirement);addKv(cdl,'Coverage',structuredValue(rule.coverage_conditions));addKv(cdl,'Exemptions',rule.exemptions);condition.append(cdl);summary.append(condition);
+  host.append(summary);
+  const quote = evidenceDisclosure('Read the exact rule quotation'); quote.append(el('p','quote',rule.quoted_span || 'Exact quotation unavailable.')); host.append(quote);
+  const source = evidenceDisclosure('Source details and integrity');
   const sdl = el('dl','kv'); addKv(sdl,'Document ID',rule.source_doc_id); addKv(sdl,'Retrieved',displayDate(prov?.retrieved_at)); addKv(sdl,'Source hash',prov?.source_sha256); addKv(sdl,'Manifest hash',prov ? (prov.manifest_hash_match === true ? 'Matched' : prov.manifest_hash_match === false ? 'Mismatch / unresolved' : 'Unknown') : null); source.append(sdl);
   const u = safeUrl(rule.source_url); if (u) { const link=el('a','evidence-link','Open supplied source URL'); link.href=u; link.target='_blank'; link.rel='noopener noreferrer'; source.append(link); }
-  if (!prov) source.append(el('div','notice danger','No provenance record was supplied for this rule. Treat source verification as unavailable.'));
+  if (!prov) host.append(el('div','notice danger','No provenance record was supplied for this rule. Treat source verification as unavailable.'));
+  if(prov?.manifest_hash_match===false)host.append(el('p','integrity-note','Source integrity note: the captured-text hash does not match the original organizer manifest. The exact source snapshot is preserved below.'));
   host.append(source);
   if (prov?.authorized_companion_spans?.length) {
-    const helper=el('section','evidence-box');helper.append(el('h3','','Linked companion evidence'));
+    const helper=evidenceDisclosure('Read linked companion evidence');
     for(const span of prov.authorized_companion_spans){helper.append(el('p','',span.source_doc_id || ''),el('p','quote',span.text || '')); const url=safeUrl(span.source_url);if(url){const a=el('a','evidence-link','Open companion source');a.href=url;a.target='_blank';a.rel='noopener noreferrer';helper.append(a);}}
     host.append(helper);
   }
   if (prov?.supporting_spans?.length) {
-    const spans = el('section','evidence-box'); spans.append(el('h3','','Supporting source spans'));
+    const spans = evidenceDisclosure('Read the complete saved supporting passages');
     for (const s of prov.supporting_spans) { const p=el('p','quote',s.text || ''); spans.append(p); }
     host.append(spans);
   }
   if (prov?.skeptic) {
-    const sk = el('section','evidence-box'); sk.append(el('h3','','Independent review note')); const dl2=el('dl','kv'); addKv(dl2,'Verdict',prov.skeptic.verdict); addKv(dl2,'Reason',prov.skeptic.reason); sk.append(dl2); host.append(sk);
+    const sk = evidenceDisclosure('Read the independent review note'); const dl2=el('dl','kv'); addKv(dl2,'Verdict',prov.skeptic.verdict); addKv(dl2,'Reason',prov.skeptic.reason); sk.append(dl2); host.append(sk);
   }
   const changeAction = el('section','evidence-box'); changeAction.append(el('h3','','Continue the audit trail'), el('p','rule-explanation','Review the supplied T1-T5 change outputs for the selected snapshot. The UI does not infer which test maps to this rule.')); const changeBtn=el('button','button','View supplied change cases'); changeBtn.type='button'; changeBtn.addEventListener('click',()=>{ $('evidenceDialog').close(); switchView('changes'); const tab=document.querySelector('.tab[data-view=\"changes\"]'); tab?.focus(); $('changesView').scrollIntoView({behavior:'smooth'}); }); changeAction.append(changeBtn); host.append(changeAction);
   $('evidenceTitle').textContent = rule.title || 'Check my homework'; $('evidenceDialog').showModal();
@@ -446,7 +459,7 @@ function renderAudit() {
   const host=$('auditContent'); host.replaceChildren(); const r=state.report;
   $('generatedPill').textContent = r?.generated_at ? `Generated ${displayDate(r.generated_at)}` : 'Report unavailable';
   if (!r) { host.append(el('div','notice','No report.json was supplied. Validation and extraction metrics are unavailable; the UI does not fabricate them.')); return; }
-  const metrics=el('div','audit-grid'); metrics.append(metric('Documents attempted',r.extraction?.documents_attempted),metric('Accepted rule records',r.extraction?.accepted_rules),metric('Model/API calls',r.extraction?.api_calls),metric('Estimated API cost',r.extraction?.estimated_usd == null ? null : `$${Number(r.extraction.estimated_usd).toFixed(2)}`)); host.append(metrics);
+  const metrics=el('div','audit-grid'); metrics.append(metric('Documents attempted',r.extraction?.documents_attempted),metric('Accepted rule records',r.extraction?.accepted_rules),metric('Model/API calls — this snapshot run',r.extraction?.api_calls),metric('Estimated API cost — this snapshot run',r.extraction?.estimated_usd == null ? null : `$${Number(r.extraction.estimated_usd).toFixed(2)}`)); host.append(metrics,el('p','section-intro','Call count and estimated cost describe this snapshot run only. They do not include earlier extraction, source, review or presentation runs.'));
   const geo=el('div','audit-block'); geo.append(el('h3','','Jurisdiction resolution')); const g=el('div','audit-grid'); g.append(metric('Addresses checked',r.jurisdictions?.checked),metric('Matched geography',r.jurisdictions?.matched),metric('Unknown geography',r.jurisdictions?.unknown)); geo.append(g); host.append(geo);
   const checks=el('div','audit-block'); checks.append(el('h3','','Validation checks')); const list=el('ul','check-list');
   const checkRows=Array.isArray(r.validation?.checks) ? r.validation.checks : [];

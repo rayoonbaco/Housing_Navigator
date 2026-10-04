@@ -1,0 +1,40 @@
+{
+  "reviews": [
+    {
+      "team_rule_id": "HN-SUP-V4S002-001",
+      "verdict": "supported",
+      "reason": "Actors, prohibited conduct, coordination definition, same-owner and licensed-agent exemptions, primary-residence and facility exclusions, and the separate no-facilitation provision all match the cited text. No date claims. Definitions come from the companion ordinance, which the amending ordinance leaves unchanged.",
+      "evidence_ids": [
+        "rule-quote",
+        "support:2",
+        "support:3"
+      ]
+    },
+    {
+      "team_rule_id": "HN-SUP-P001-002",
+      "verdict": "supported",
+      "reason": "Subsection (b) coercion, the definitions (common pricing algorithm, distribute, person excluding end consumers) and the separate subsection (a) conspiracy prohibition are accurately stated. The explanation says it is not a rental-specific ban and makes no date claims.",
+      "evidence_ids": [
+        "rule-quote",
+        "support:1"
+      ]
+    },
+    {
+      "team_rule_id": "HN-R2-D067-006-004",
+      "verdict": "supported",
+      "reason": "The passage allows charging the credit report cost and requesting reasonable application fees or employment verification. Employment verification is not described as a fee, and the explanation limits itself to the passage without any global no-cap claim.",
+      "evidence_ids": [
+        "rule-quote",
+        "support:0"
+      ]
+    },
+    {
+      "team_rule_id": "HN-SUP-P005-001",
+      "verdict": "supported",
+      "reason": "Over-10% year-over-year renewal threshold, current-tenant scope, timing before implementation, placement in the lease's first page or the Division form, all four disclosures including the conditional tenant-paid right to take legal action, and the $1,000 per incident fine match the ordinance. The explanation says it is not a cap on increases.",
+      "evidence_ids": [
+        "support:1"
+      ]
+    }
+  ]
+}

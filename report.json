@@ -1,0 +1,50 @@
+{
+  "baseline_claims": 15,
+  "new_approved": 4,
+  "published_claims": 19,
+  "withheld_ids": [],
+  "calls": 2,
+  "estimated_usd": 0.15345,
+  "usage": [
+    {
+      "unit": "20261004T051202-ef82f45d",
+      "stage": "explain",
+      "estimated_usd": 0.075392,
+      "input_tokens": 29816,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1576,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global"
+    },
+    {
+      "unit": "20261004T051202-ef82f45d",
+      "stage": "review",
+      "estimated_usd": 0.078058,
+      "input_tokens": 31224,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1561,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global"
+    }
+  ],
+  "errors": [],
+  "canonical_rules_changed": false,
+  "eligibility_changed": false,
+  "expanded_prose_limit": 2000
+}

@@ -85,7 +85,7 @@ async function init() {
     state.report = report;
     if(state.mode!=='fixture'){
       const artifact=await fetchJson('resident-claims.json',false);
-      if(artifact?.version==='resident-claims-1'&&Array.isArray(artifact.claims)){
+      if(['resident-claims-1','resident-claims-coordinator-audit-3'].includes(artifact?.version)&&Array.isArray(artifact.claims)){
         state.residentClaims=artifact.claims;
         try { for(const rule of rules)state.ruleFingerprints.set(rule.team_rule_id,await ResidentLogic.fingerprint(rule)); }
         catch(err){state.residentClaims=[];console.warn('Reviewed prose unavailable; using original rule requirements.');}

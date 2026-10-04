@@ -18,7 +18,7 @@ const CHANGE_TITLES = {
 const state = {
   manifest: null, addresses: [], jurisdictions: [], rules: [], provenance: [], report: null,
   lookups: null, changes: null, selectedAddressId: null, mode: 'production',
-  lookupError: null, changeError: null, snapshotRequestId: 0, residentClaims: [], ruleFingerprints: new Map()
+  lookupError: null, changeError: null, snapshotRequestId: 0, searchPending: false, searchMessage: '', residentClaims: [], ruleFingerprints: new Map()
 };
 const $ = (id) => document.getElementById(id);
 
@@ -163,11 +163,21 @@ function filterAddresses(query) {
     if (match) shown++;
   }
   $('addressSearch').setAttribute('aria-expanded', shown > 0 ? 'true' : 'false');
+  const selected = state.addresses.find(a => a.address_id === state.selectedAddressId);
+  state.searchPending = !!q && (!selected || !addressLabel(selected).toLowerCase().includes(q));
+  state.searchMessage = shown === 0
+    ? 'No matching address in this 500-address sample. We cannot check another home from this saved dataset. Clear the search or choose a supplied address.'
+    : 'Choose a matching address below to see its answers. Typing alone does not select a home.';
+  if (!q && selected) setLoad(`Showing saved answers for ${selected.street_address}. Choose an address below to change homes.`);
+  if (q) setLoad(state.searchPending ? state.searchMessage : `${shown} matching address${shown === 1 ? '' : 'es'}. Answers below are for ${selected.street_address}.`);
+
 }
 function bindEvents() {
-  $('addressSearch').addEventListener('input', e => filterAddresses(e.target.value));
+  $('addressSearch').addEventListener('input', e => { filterAddresses(e.target.value); renderAll(); });
   $('addressList').addEventListener('change', () => {
     state.selectedAddressId = $('addressList').value;
+    state.searchPending = false;
+    setLoad(`Showing saved answers for ${selectedAddress()?.street_address || state.selectedAddressId}.`);
     renderAll();
   });
   $('addressList').addEventListener('dblclick', () => $('answerView').scrollIntoView({behavior:'smooth'}));
@@ -261,7 +271,7 @@ function structuredValue(value) {
   return value;
 }
 function renderAddressSummary() {
-  const host=$('addressSummary');host.replaceChildren();const a=selectedAddress();if(!a)return;
+  const host=$('addressSummary');host.replaceChildren();if(state.searchPending){host.append(el('div','notice',state.searchMessage));return;}const a=selectedAddress();if(!a)return;
   const j=selectedJurisdiction();const summary=el('div','home-context');
   summary.append(el('h3','',a.street_address));
   const matched=j?.jurisdiction_result==='matched_geography';
@@ -298,6 +308,7 @@ function ruleById(id) { return state.rules.find(r => r.team_rule_id === id); }
 function provenanceById(id) { return state.provenance.find(p => p.team_rule_id === id); }
 function renderCategories() {
   const host = $('categoryGrid'); host.replaceChildren();
+  if(state.searchPending){$('resultCount').textContent='Choose an address';host.append(el('p','empty-state','Answers are hidden until you select a matching home.'));return;}
   const entries = lookupEntries();
   $('resultCount').textContent = entries === null ? 'Unavailable' : `${Array.isArray(entries) ? entries.length : 0} returned`;
   if (entries === null) {
@@ -325,6 +336,21 @@ function renderCategory(key,label,items) {
   header.append(el('h3','',ResidentLogic.QUESTIONS[key] || label),el('span',`status-badge ${summary.tone}`,summary.label));section.append(header);
   section.append(el('p','resident-answer',summary.answer));
   if(summary.extra)section.append(el('p','resident-qualification',summary.extra));
+  if(summary.reasons?.length || summary.interactionReviewNeeded){
+    const next=el('details','topic-details');next.append(el('summary','','What should I check next?'));
+    if(summary.reasons?.includes('facts'))next.append(el('p','','Open “Does this cover my situation?” under the rule to see which facts are missing. Check those against your lease and building records; a missing fact is not a denial of protection.'));
+    if(summary.reasons?.includes('geography'))next.append(el('p','','Open “Check address details” to see the location match. The postal city alone does not establish the legal jurisdiction.'));
+    if(summary.reasons?.includes('date'))next.append(el('p','','Open “Check my homework” and check the effective date and cited source. This saved check has not verified the date needed for that answer.'));
+    if(summary.reasons?.some(x=>x==='review'||x==='unresolved') || summary.interactionReviewNeeded)next.append(el('p','','A source or legal interpretation still needs review. Use “Check my homework” to collect the rule and citation for a tenant adviser or legal-aid provider; extra building details cannot resolve an unfinished legal review.'));
+    section.append(next);
+  }
+  if(key==='screening_restrictions'){
+    const fair=items.filter(x=>/discriminat|families with children|familial status|disability|voucher|source of lawful income/i.test((x.rule?.title||'')+' '+(x.rule?.requirement||'')));
+    const rights=el('details','topic-details');rights.append(el('summary','',`Fair housing: discrimination and family protections (${fair.length} rules to check)`));
+    rights.append(el('p','topic-note','These are the relevant rules returned by this saved check, not a complete list of fair-housing rights. Each rule keeps its own coverage limits.'));
+    if(!fair.length)rights.append(el('p','','No fair-housing rule was identified in these returned records. This does not mean you have no rights.'));
+    for(const item of fair)rights.append(renderRule(item.entry,item.rule));section.append(rights);
+  }
   const previewItem=[...items].sort((a,b)=>(a.entry.result==='applies'?0:1)-(b.entry.result==='applies'?0:1)).find(x=>x.rule&&approvedClaim(x.rule));
   if(previewItem){
     const claim=approvedClaim(previewItem.rule);const preview=el('div','reviewed-preview');
@@ -436,6 +462,7 @@ function openEvidence(entry,rule) {
 function renderChanges() {
   $('changeDatePill').textContent = `Snapshot ${$('snapshotSelect').value || 'unavailable'}`;
   const host = $('changeCases'); host.replaceChildren();
+  if(state.searchPending){host.append(el('div','notice',state.searchMessage));return;}
   if (!state.changes || typeof state.changes !== 'object') { host.append(el('div','notice danger',state.changeError || 'Change-case output is unavailable for this snapshot.')); return; }
   for (const id of ['T1','T2','T3','T4','T5']) {
     const c = state.changes[id]; const card = el('article','change-card'); card.append(el('p','eyebrow',id), el('h3','',CHANGE_TITLES[id]));
@@ -451,6 +478,7 @@ function renderChanges() {
     if(potential.length)card.append(el('div','notice',`${potential.length} IDs are potential notification dependencies, not confirmed applicable protections.`));
     const selectedAffected = affected.includes(state.selectedAddressId); const selectedConflict = conflicts.includes(state.selectedAddressId);
     card.append(el('div','selected-impact', `${state.selectedAddressId || 'Selected address'}: ${selectedAffected ? 'included in affected set' : 'not in affected set'}${selectedConflict ? ' · possible conflict flagged' : ''}${selectedUnknown ? ' · some relevant eligibility remains unknown' : ''}.`));
+    card.append(el('p','topic-note','Original change-case review notes follow. Their references to “now” or “not yet effective” describe the review baseline, not necessarily the date you selected. Check My home for the selected-date rule status.'));
     card.append(el('p','rule-explanation',c.notes || 'No notes supplied.')); host.append(card);
   }
 }

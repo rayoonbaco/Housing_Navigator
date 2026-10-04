@@ -1,6 +1,6 @@
 /* Presentation only: never changes saved eligibility or chooses a governing law. */
 (function(root){
-  const QUESTIONS={rent_increase_limits:'Can my rent go up?',just_cause_eviction:'Can my landlord make me leave?',security_deposits:'What can I be charged for a deposit?',application_screening_fees:'What can I be charged to apply?',screening_restrictions:'What can a landlord check about me?',algorithmic_rent_setting:'Can software be used to set my rent?'};
+  const QUESTIONS={rent_increase_limits:'Can my rent go up?',just_cause_eviction:'Can my landlord make me leave?',security_deposits:'What can I be charged for a deposit?',application_screening_fees:'What can I be charged to apply?',screening_restrictions:'Can I be treated unfairly when I apply?',algorithmic_rent_setting:'Can software be used to set my rent?'};
   function uncertainty(entry){
     const text=String(entry.explanation||'');
     if(/did not pass independent review|compilation.*(?:failed|not pass)|not independently reviewed/i.test(text))return 'review';

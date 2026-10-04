@@ -1,0 +1,19 @@
+{
+  "returned_run": "20261004T051202-ef82f45d",
+  "genuine_calls": 2,
+  "estimated_usd": 0.15345,
+  "context_pin_replay": "exact match",
+  "automated_gate_replay": "4/4",
+  "coordinator_admitted_ids": [
+    "HN-R2-D067-006-004",
+    "HN-SUP-P001-002"
+  ],
+  "coordinator_withheld": {
+    "HN-SUP-V4S002-001": "Nonpublic competitor information definition omits less-than-365-days and not widely/readily available to the public at no cost; explanation is broader than exact defined scope.",
+    "HN-SUP-P005-001": "Selected support:1 quote does not establish greater-than-10-percent threshold. Full context has supporting passage but candidate/reviewer did not cite it; no silent alias repairs."
+  },
+  "claim_texts_modified": false,
+  "canonical_rules_changed": false,
+  "eligibility_changed": false,
+  "published_claims": 17
+}

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Housing Navigator - cited, address-level rental housing law prototype">
+  <title>Housing Navigator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="prototype-note" role="note">Housing information from a saved check · Some answers need more information · Not legal advice</div>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div id="fixtureBanner" class="fixture-banner" hidden role="status">FIXTURE MODE - SYNTHETIC DATA - NOT LIVE RESULTS</div>
+  <header class="site-header">
+    <div class="brand-wrap">
+      <div class="brand-mark" aria-hidden="true">HN</div>
+      <div>
+        <div class="eyebrow">Rental Housing Law Navigator</div>
+        <h1>Housing Navigator</h1>
+      </div>
+    </div>
+    <div class="header-note">Prototype decision support · <strong>Not legal advice</strong></div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div>
+        <p class="eyebrow">One address. One date. Traceable answers.</p>
+        <h2 id="heroTitle">What housing rules apply to my home?</h2>
+        <p class="hero-copy">Choose your address. Get a clear starting point. Check the source behind every rule.</p>
+      </div>
+      <div class="trust-card" aria-label="How to read results">
+        <span class="trust-kicker">Know where you stand</span>
+        <strong>A short answer. The source behind it.</strong>
+        <span>If we cannot confirm something, we will tell you.</span>
+      </div>
+    </section>
+
+    <section class="query-panel" aria-labelledby="queryTitle">
+      <div class="section-heading compact">
+        <div>
+          <p class="eyebrow">Address lookup</p>
+          <h2 id="queryTitle">Find your home in the sample</h2>
+        </div>
+        <span id="modePill" class="mode-pill">Loading data…</span>
+      </div>
+      <div class="query-grid">
+        <label class="field address-field">
+          <span>Search address or ID</span>
+          <input id="addressSearch" type="search" autocomplete="off" placeholder="Start typing an address, city, ZIP or address ID" aria-controls="addressList" aria-expanded="false">
+          <select id="addressList" size="6" aria-label="Matching supplied addresses"></select>
+        </label>
+        <label class="field">
+          <span>Rules checked for</span>
+          <select id="snapshotSelect"></select>
+          <small>Choose one of the dates already checked.</small>
+        </label>
+      </div>
+      <div id="loadState" class="load-state" role="status" aria-live="polite">Loading project data…</div>
+    </section>
+
+    <nav class="view-tabs" aria-label="Navigator views" role="tablist">
+      <button id="tab-answer" class="tab active" type="button" role="tab" data-view="answer" aria-selected="true" aria-controls="answerView" tabindex="0">My home</button>
+      <button id="tab-changes" class="tab" type="button" role="tab" data-view="changes" aria-selected="false" aria-controls="changesView" tabindex="-1">What changed?</button>
+      <button id="tab-audit" class="tab" type="button" role="tab" data-view="audit" aria-selected="false" aria-controls="auditView" tabindex="-1">How we checked</button>
+    </nav>
+
+    <section id="answerView" class="view active" role="tabpanel" aria-labelledby="tab-answer">
+      <div id="addressSummary"></div>
+      <p class="resident-guide">A rule can apply while another answer is still unknown. Open a topic to see each rule and what could change the answer.</p>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Your housing questions</p>
+          <h2 id="answerHeading">Six things to know</h2>
+        </div>
+        <div class="answer-pills"><span id="answerDatePill" class="date-pill"></span><span id="resultCount" class="result-count"></span></div>
+      </div>
+      <div id="categoryGrid" class="category-grid"></div>
+    </section>
+
+    <section id="changesView" class="view" hidden role="tabpanel" aria-labelledby="tab-changes">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Deterministic change tracking</p>
+          <h2 id="changesHeading">T1-T5 change cases</h2>
+        </div>
+        <span id="changeDatePill" class="date-pill"></span>
+      </div>
+      <p class="section-intro">These cards display the engine-supplied change outputs. The browser does not recalculate applicability or synthesize missing dates.</p>
+      <div id="changeCases" class="change-grid"></div>
+    </section>
+
+    <section id="auditView" class="view" hidden role="tabpanel" aria-labelledby="tab-audit">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Reproducibility</p>
+          <h2 id="auditHeading">Audit & validation</h2>
+        </div>
+        <span id="generatedPill" class="date-pill"></span>
+      </div>
+      <div id="auditContent"></div>
+      <p><a href="data/submission_json.zip" download>Download the evaluated JSON files and evidence records</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Not legal advice.</strong> This prototype presents supplied engine outputs and source evidence. Unknown, missing, conflicting or unavailable information requires human review.
+  </footer>
+
+  <dialog id="evidenceDialog" class="evidence-dialog" aria-labelledby="evidenceTitle">
+    <div class="drawer-header">
+      <div>
+        <p class="eyebrow">Check my homework</p>
+        <h2 id="evidenceTitle">Rule evidence</h2>
+      </div>
+      <button id="closeEvidence" class="icon-button" type="button" aria-label="Close evidence drawer">×</button>
+    </div>
+    <div id="evidenceContent" class="drawer-body"></div>
+  </dialog>
+
+  <script src="lookup_codec.js" defer></script>
+  <script src="resident_logic.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>

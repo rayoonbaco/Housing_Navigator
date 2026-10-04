@@ -1,0 +1,18 @@
+{
+  "as_of":"2027-07-02",
+  "lookups":{
+    "A-DEMO1":[
+      {"team_rule_id":"FX-RENT-1","result":"applies","explanation":"Synthetic local fixture result remains applicable on the later generated snapshot.","conflict_flag":false},
+      {"team_rule_id":"FX-JC-1","result":"unknown","explanation":"Synthetic result remains unknown because owner-occupancy data is still absent.","conflict_flag":false},
+      {"team_rule_id":"FX-DEP-1","result":"superseded","explanation":"Synthetic statewide fixture remains superseded by the stricter local fixture rule.","conflict_flag":false},
+      {"team_rule_id":"FX-FEE-1","result":"applies","explanation":"Synthetic result: this generated snapshot is after the fixture fee rule effective date.","conflict_flag":false},
+      {"team_rule_id":"FX-SCREEN-1","result":"applies","explanation":"Synthetic screening restriction remains returned with a review flag.","conflict_flag":true},
+      {"team_rule_id":"FX-ALG-1","result":"applies","explanation":"Synthetic result: this snapshot is after the statewide fixture algorithmic rule effective date; a possible local conflict remains flagged.","conflict_flag":true}
+    ],
+    "A-DEMO2":[{"team_rule_id":"FX-MA-P1","result":"pending","explanation":"Synthetic pending proposal remains pending in this fixture snapshot.","conflict_flag":false}],
+    "A-DEMO3":[{"team_rule_id":"FX-JC-1","result":"unknown","explanation":"Synthetic geography remains unresolved.","conflict_flag":false}],
+    "A-DEMO4":[],
+    "A-DEMO5":[{"team_rule_id":"FX-MISSING-RULE","result":"unknown","explanation":"Synthetic missing-rule case remains unresolved.","conflict_flag":false}],
+    "A-DEMO6":"INTENTIONALLY MALFORMED FIXTURE LOOKUP"
+  }
+}

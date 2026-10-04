@@ -1,31 +1,13 @@
-# Publication steps
+# Update the existing deployment
 
-This directory is the repository root. Upload its **contents**, preserving the `ui`, `engine` and `audit` directories. Do not upload the enclosing package ZIP as the website.
+Your repository and Render static site already exist. Do not repeat setup.
 
-## GitHub
+1. Run verify_release.py from this publication directory.
+2. Open https://github.com/rayoonbaco/Housing_Navigator/upload/main .
+3. Drag the CONTENTS of Housing_Publication_v3 into the upload area, including ui, engine, audit and root files. Do not upload its ZIP or enclosing folder.
+4. Commit to main with message: Publish audited resident explanations and clearer evidence drawers.
+5. Wait for the existing Render site to deploy the commit. Send the commit URL and confirm that https://housing-navigator.onrender.com/ loads.
 
-Create a public repository named `Housing_Navigator` at https://github.com/new. Use description “Plain-language rental housing rules with inspectable evidence.” An empty repository avoids creating duplicate initial files. Choose the new repository, then **uploading an existing file** (or **Add file → Upload files**). Drag all contents of this publication directory into the upload area. Commit with “Add evaluated Housing Navigator release candidate and evidence.”
+No API calls or credentials are required. Existing logs, rules and evaluated eligibility remain preserved. This package contains17 audited explanations; two model-supported candidates remain withheld. The original method PDF is historical; METHOD_NOTE.md is current.
 
-The publication package contains fewer than 100 files and every file is below 25 MiB, GitHub's browser file limit. The canonical challenge JSON is archived, keeping large pretty-printed snapshots out of browser uploads. Official upload instructions: https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository
-
-Send the repository URL to the coordinator for verification. Check its README, `ui/index.html`, compressed lookup resources, source code and audit archives are present. Do not replace an earlier unrelated repository.
-
-## Render
-
-Create **New → Static Site**, connect this repository and select its committed branch. Use:
-
-| Setting | Value |
-|---|---|
-| Name | `housing-navigator` (or an available variant) |
-| Root directory | Leave blank |
-| Build command | `true` |
-| Publish directory | `ui` |
-| Environment variables | None required |
-
-The included `render.yaml` expresses the same configuration. Deploy as a static site, not a Python web service. Official static-site documentation: https://render.com/docs/static-sites
-
-Once Render reports the deployment live, send its URL to the coordinator. Then check the public URL while signed out: address selection, each topic, one evidence drawer, all four dates, T1–T5, mobile layout and downloaded JSON. These interaction checks are separate from a successful build.
-
-## Submission
-
-Use only verified GitHub/demo links. Record three separate videos, each at most 60 seconds, as shown in the supplied HackOS screenshots. Complete HackOS and the separate Google Form, saving both receipts. The coordinator will reconcile live form requirements before final submission. Avoid new features during the final 90 minutes.
+After deployment, verify actual browser address selection, six topics, full explanation expansion, evidence drawers, four dates, change cases, keyboard behavior and mobile layout. Successful deployment alone does not certify those interactions or legal accuracy.

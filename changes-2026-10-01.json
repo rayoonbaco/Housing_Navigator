@@ -1,0 +1,7 @@
+{
+  "T1":{"affected_address_ids":["A-DEMO6"],"conflict_flag_address_ids":[],"notes":"SYNTHETIC FIXTURE: demonstrates a dated California change-case output."},
+  "T2":{"affected_address_ids":["A-DEMO1"],"conflict_flag_address_ids":[],"notes":"SYNTHETIC FIXTURE: local boundary result includes only the synthetic matching city address."},
+  "T3":{"affected_address_ids":["A-DEMO1","A-DEMO3","A-DEMO5"],"conflict_flag_address_ids":["A-DEMO1"],"notes":"SYNTHETIC FIXTURE: statewide future rule is not yet effective at this snapshot; one local interaction is flagged."},
+  "T4":{"affected_address_ids":["A-DEMO2","A-DEMO4"],"conflict_flag_address_ids":[],"notes":"SYNTHETIC FIXTURE: pending Massachusetts proposals show the addresses they would affect if enacted."},
+  "T5":{"affected_address_ids":[],"conflict_flag_address_ids":[],"notes":"SYNTHETIC FIXTURE: failed ballot measure has an empty affected set and creates no current rent cap."}
+}

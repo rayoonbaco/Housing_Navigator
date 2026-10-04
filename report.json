@@ -1,50 +1,82 @@
 {
-  "baseline_claims": 15,
-  "new_approved": 4,
-  "published_claims": 19,
-  "withheld_ids": [],
-  "calls": 2,
-  "estimated_usd": 0.15345,
-  "usage": [
-    {
-      "unit": "20261004T051202-ef82f45d",
-      "stage": "explain",
-      "estimated_usd": 0.075392,
-      "input_tokens": 29816,
-      "cache_creation_input_tokens": 0,
-      "cache_read_input_tokens": 0,
-      "cache_creation": {
-        "ephemeral_5m_input_tokens": 0,
-        "ephemeral_1h_input_tokens": 0
+  "generated_at": "2026-10-04T04:07:58.270082+00:00",
+  "extraction": {
+    "documents_attempted": 54,
+    "accepted_rules": 310,
+    "api_calls": 0,
+    "estimated_usd": 0
+  },
+  "jurisdictions": {
+    "checked": 500,
+    "matched": 480,
+    "unknown": 20
+  },
+  "validation": {
+    "checks": [
+      {
+        "name": "Latest run API requests",
+        "status": "pass",
+        "detail": "0 genuine calls; 0 recorded errors. Usage/cost only describe this run."
       },
-      "output_tokens": 1576,
-      "output_tokens_details": {
-        "thinking_tokens": 0
+      {
+        "name": "Coverage predicates reviewed",
+        "status": "pass",
+        "detail": "289/310 independently reviewed. Reviewed predicates may retain unknown eligibility."
       },
-      "service_tier": "standard",
-      "inference_geo": "global"
-    },
-    {
-      "unit": "20261004T051202-ef82f45d",
-      "stage": "review",
-      "estimated_usd": 0.078058,
-      "input_tokens": 31224,
-      "cache_creation_input_tokens": 0,
-      "cache_read_input_tokens": 0,
-      "cache_creation": {
-        "ephemeral_5m_input_tokens": 0,
-        "ephemeral_1h_input_tokens": 0
+      {
+        "name": "County geography",
+        "status": "pass",
+        "detail": "480 counties from existing Census responses; county-law completeness is unverified."
       },
-      "output_tokens": 1561,
-      "output_tokens_details": {
-        "thinking_tokens": 0
+      {
+        "name": "T1",
+        "status": "pass",
+        "detail": "250 affected; 250 with some eligibility unknown; 0 potential notification dependencies."
       },
-      "service_tier": "standard",
-      "inference_geo": "global"
-    }
-  ],
-  "errors": [],
-  "canonical_rules_changed": false,
-  "eligibility_changed": false,
-  "expanded_prose_limit": 2000
+      {
+        "name": "T2",
+        "status": "pass",
+        "detail": "88 affected; 93 with some eligibility unknown; 88 potential notification dependencies."
+      },
+      {
+        "name": "T3",
+        "status": "pass",
+        "detail": "140 affected; 140 with some eligibility unknown; 0 potential notification dependencies."
+      },
+      {
+        "name": "T4",
+        "status": "pass",
+        "detail": "110 affected; 0 with some eligibility unknown; 0 potential notification dependencies."
+      },
+      {
+        "name": "T5",
+        "status": "pass",
+        "detail": "0 affected; 0 with some eligibility unknown; 0 potential notification dependencies."
+      },
+      {
+        "name": "Everyday explanations",
+        "status": "pass",
+        "detail": "17 published source-audited explanations; two final candidates withheld after semantic/citation audit. Original model approvals and coordinator rejection reasons preserved."
+      }
+    ]
+  },
+  "limitations": [
+    "Preliminary model-reviewed output; not legal advice or counsel certification.",
+    "Organizer source-byte manifest mismatch unresolved.",
+    "20 legal cities unknown. Missing owner/certificate/tenant facts preserved.",
+    "Supplemental provenance distinguishes raw official/publisher downloads from browser transcriptions and third-party hosting.",
+    "No reviewed cross-source stricter-rule supersession or duplicate consolidation yet.",
+    "T2 potential impact is a legal-place change-notification dependency, not confirmed eligibility; individual missing facts stay unknown.",
+    "County is recovered geography metadata; supplied rule schema has state/city only.",
+    "Court opinion is third-party hosted; direct official final IP25-21 endpoint remains unavailable.",
+    "Historical/future snapshots conservative where full temporal validity is not established.",
+    "Corrected jurisdiction matching admits qualified City, ST labels. Original records remain unchanged.",
+    "Source-rule change mapping replays the existing v2.3 independent review; no new mapping/model review was performed.",
+    "T4 is hypothetical, T2 notification dependencies do not confirm eligibility.",
+    "Saved-run viewer, not live extraction.",
+    "Change cases use prescribed dates independently of the lookup date selector.",
+    "Passing a boundary/notification test does not confirm each property exemption or eligibility fact.",
+    "Video/form/deployment/submission completion is tracked separately.",
+    "Two final everyday explanations remain withheld after source audit despite model approval; all source quotes and eligibility uncertainty remain inspectable."
+  ]
 }

@@ -1,0 +1,32 @@
+{
+  "contract_version": "1",
+  "mode": "production",
+  "default_as_of": "2026-10-01",
+  "addresses_url": "data/addresses.json",
+  "rules_url": "data/rules.json",
+  "provenance_url": "data/provenance.json",
+  "jurisdictions_url": "data/jurisdictions.json",
+  "report_url": "data/report.json",
+  "snapshots": [
+    {
+      "as_of": "2025-12-31",
+      "lookups_url": "data/lookups-2025-12-31.json",
+      "changes_url": "data/changes.json"
+    },
+    {
+      "as_of": "2026-01-02",
+      "lookups_url": "data/lookups-2026-01-02.json",
+      "changes_url": "data/changes.json"
+    },
+    {
+      "as_of": "2026-10-01",
+      "lookups_url": "data/lookups-2026-10-01.json",
+      "changes_url": "data/changes.json"
+    },
+    {
+      "as_of": "2027-07-02",
+      "lookups_url": "data/lookups-2027-07-02.json",
+      "changes_url": "data/changes.json"
+    }
+  ]
+}

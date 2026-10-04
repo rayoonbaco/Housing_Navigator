@@ -1,0 +1,17 @@
+{
+  "accepted_ids": [
+    "HN-SUP-P005-002",
+    "HN-SUP-V4S002-002"
+  ],
+  "original_rejection": "Missing or excessive prose (900-character gate)",
+  "policy": "Full, expandable source-audited prose may contain up to 2000 characters. No truncation, wording or citation repairs. Default gate remains 900 unless explicit expanded-detail policy is chosen.",
+  "semantic_review": "Independent source audit checked primary residence/facility exclusions, same-owner/licensed-agent exceptions and source-bound references. JC001 stays withheld for universal minimum-period claim omitting exceptions.",
+  "unchanged_candidate_text": true,
+  "new_api_calls": 0,
+  "remaining_withheld_ids": [
+    "HN-SUP-V4S002-001",
+    "HN-SUP-P001-002",
+    "HN-R2-D067-006-004",
+    "HN-SUP-P005-001"
+  ]
+}

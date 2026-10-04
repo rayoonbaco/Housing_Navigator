@@ -1,0 +1,24 @@
+'use strict';
+const assert=require('node:assert/strict');const fs=require('node:fs');const vm=require('node:vm');
+const code=fs.readFileSync(__dirname+'/../app.js','utf8');
+class Element{constructor(tag){this.tagName=tag;this.children=[];this.textContent='';this.className='';}append(...nodes){this.children.push(...nodes)}replaceChildren(...nodes){this.children=nodes}addEventListener(){}showModal(){this.modal=true}close(){this.modal=false}}
+const host=new Element('div'),title=new Element('h2'),dialog=new Element('dialog');const nodes={evidenceContent:host,evidenceTitle:title,evidenceDialog:dialog,snapshotSelect:{value:'2026-10-01'}};
+const rule={team_rule_id:'r',title:'Rule title',citation:'Citation exact',source_doc_id:'D',source_url:'https://example.org/law',quoted_span:'UNMODIFIED source quote.',requirement:'UNCHANGED requirement.',status:'in_force',effective_date:'2025-01-01',coverage_conditions:'Coverage exact',exemptions:'Exemption exact'};
+const prov={retrieved_at:'2026-10-01',source_sha256:'hash',manifest_hash_match:false,supporting_spans:[{id:'E1',text:'COMPLETE supporting quote.'}],authorized_companion_spans:[{id:'H1',text:'COMPLETE companion quote.',source_url:'javascript:alert(1)'}],skeptic:{verdict:'supported',reason:'REVIEW reason exact'}};
+const claim={text:'long '.repeat(100),evidence:[{span_id:'support:0',text:'COMPLETE supporting quote.'}]};
+const ctx={document:{createElement:tag=>new Element(tag)},window:{location:{href:'https://example.org/'}},URL,state:{lookups:{as_of:'2026-10-01'}},$:id=>nodes[id],provenanceById:()=>prov,approvedClaim:()=>claim,ResidentLogic:{compactClaim:()=>({showInline:false}),eligibilityCopy:()=> 'Unknown eligibility remains visible'},humanStatus:x=>x,displayDate:x=>x,structuredValue:x=>x,addKv:(dl,label,value)=>{dl.append(new Element('dt'),Object.assign(new Element('dd'),{textContent:value}))}};
+vm.createContext(ctx);
+const elCode=code.slice(code.indexOf('function el('),code.indexOf('function valueOrMissing('));const safeCode=code.slice(code.indexOf('function safeUrl('),code.indexOf('async function fetchJson('));const openCode=code.slice(code.indexOf('function evidenceDisclosure('),code.indexOf('function renderChanges('));
+vm.runInContext(elCode+safeCode+openCode,ctx);ctx.openEvidence({result:'unknown'},rule);
+const all=[];function walk(node,underDetails=false){all.push({node,underDetails});for(const child of node.children||[])walk(child,underDetails||node.tagName==='details')}walk(host);
+assert.equal(dialog.modal,true);assert.equal(title.textContent,'Rule title');
+assert.ok(all.filter(x=>x.node.tagName==='details').length>=7);
+for(const expected of [claim.text,rule.quoted_span,prov.supporting_spans[0].text,prov.authorized_companion_spans[0].text,rule.exemptions])assert.ok(all.some(x=>x.node.textContent===expected&&x.underDetails),expected);
+assert.ok(all.some(x=>x.node.textContent===rule.citation&&!x.underDetails));
+assert.ok(all.some(x=>x.node.textContent==='Unknown eligibility remains visible'&&!x.underDetails));
+assert.ok(all.some(x=>x.node.textContent==='Open the cited source'&&!x.underDetails));
+assert.ok(all.some(x=>String(x.node.textContent).includes('does not match')&&!x.underDetails));
+assert.ok(all.filter(x=>x.node.tagName==='a').every(x=>!x.node.href.startsWith('javascript:')));
+assert.match(code,/Model\/API calls — this snapshot run/);assert.match(code,/Call count and estimated cost describe this snapshot run only/);
+assert.doesNotMatch(code,/innerHTML\s*=/);
+console.log('PASS: disclosure DOM preserves complete quotes/exceptions/long prose, visible citation/qualification/date/source/integrity, safe links and snapshot-scoped metrics.');

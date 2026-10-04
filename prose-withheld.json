@@ -1,0 +1,175 @@
+{
+  "released": 13,
+  "withheld": 6,
+  "basis": "See evidence.md. Original positive model reviews retained as historical receipts, not publication authority.",
+  "claims": [
+    {
+      "team_rule_id": "HN-SUP-P005-002",
+      "rule_fingerprint": "837fba1ece77da67112f8ab5e43ba827927ce1c590125b34771a2046cfb5bbed",
+      "claim_id": "HN-SUP-P005-002:meaning",
+      "text": "In Hoboken, landlords renting residential dwelling units may not use software, algorithms, or data-sharing platforms to analyze nonpublic competitor information from other lessors to coordinate, recommend, or implement rents, lease terms, or occupancy levels among competing lessors. Information that is 365 days old or older, or widely and freely available to the public, is not 'nonpublic.' Violations can be brought in Hoboken Municipal Court by the Division of Housing or an aggrieved private citizen; on conviction, penalties include N.J.S.A. 40:49-5 penalties, a fine up to $2,000, or up to 90 days of community service.",
+      "evidence": [
+        {
+          "span_id": "support:1",
+          "text": "\n\n\n\n\n\nA. \n\nProhibited conduct. Landlords who rent any residential dwelling unit (defined as any primary residence excluding medical/long-term care or detention facilities) in the City of Hoboken are prohibited from price fixing using algorithmic pricing. For purposes of this chapter, \"price fixing using algorithmic pricing\" shall be defined as the use of software, algorithms, or data-sharing platforms to collect and analyze nonpublic competitor information from other real estate lessors in order to coordinate, recommend, or implement rental prices, lease terms, or occupancy levels for residential dwelling units among competing real estate lessors. For purposes of this chapter, \"nonpublic competitor information\" shall be defined as information including, but not limited to, prices, supply levels, security deposits, ideal occupancy levels, lease contract termination, renewal dates of residential dwelling units or any other material terms that is less than 365 days old and is not widely and readily available to the public at no cost.\n\nB. \n\nEnforcement.\n\n(1) \n\nEnforcement. Alleged violations of this chapter may be brought by the Division of Housing, or any private citizen alleging to be aggrieved, to the Hoboken Municipal Court for adjudication.\n\n\nC. \n\nPenalties. Any person violating the requirements set forth in this chapter shall, upon conviction, be subject to one or more of the following penalties:\n\n(1) \n\nPenalties as prescribed under N.J.S.A. 40:49-5; or\n\n(2) \n\nBy a fine "
+        },
+        {
+          "span_id": "support:2",
+          "text": "not exceeding $2,000; or\n\n(3) \n\nBy a period of community service not exceeding 90 days.\n\n\n                \n      \n  \n\n            \n          \n        \n            \n\n    \n      \n\n        \n\n          By using eCode360 you agree to be legally bound by the Terms of Use and Privacy Policy.\n        \n        \n\n              \n        \n      \n    \n          \n\n          \n\n      \n      \n        \n\n            \n          \n  \n\n        \n    \n\n  \n\n"
+        }
+      ],
+      "extractor": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXsy7qPRtff2Y3zPWZJ"
+      },
+      "reviewer": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXtSkzQWvho2eRmrNPy",
+        "reason": "Faithfully states the actor (landlords renting residential dwelling units), the prohibited conduct, the 365-day and public-availability carve-outs, the enforcement route (Division of Housing or aggrieved private citizen in Municipal Court), and the penalty options (N.J.S.A. 40:49-5, fine up to $2,000, or community service up to 90 days)."
+      },
+      "scope": "rule_meaning"
+    },
+    {
+      "team_rule_id": "HN-SUP-V4S002-001",
+      "rule_fingerprint": "7e4494a6f78fa4c49fddc9ca161bffd5da97cfbdedfbaba48e82dd54b394f780",
+      "claim_id": "HN-SUP-V4S002-001:meaning",
+      "text": "In Jersey City, it is unlawful for a real estate lessor, or its agent or subcontractor, to subscribe to, contract with, give anything of value for, or otherwise use the services of a 'Service Provider,' meaning a person who collects nonpublic competitor information, processes it computationally, and recommends rents, lease terms, or occupancy levels. Licensed real estate agents acting in accordance with state regulations are excluded from that definition.",
+      "evidence": [
+        {
+          "span_id": "support:0",
+          "text": "AN ORDINANCE AMENDING CHAPTER 218 (MULTIPLE DWELLINGS) SECTION 12 (PREVENTING ALGORITHMIC RENT-FIXING IN THE RENTAL HOUSING MARKET), OF THE CODE OF ORDINANCES OF THE CITY OF JERSEY CITY.\nWHEREAS; the Municipal Council passed ordinance Ord. 25-057 at the May 21st 2025, Council meeting; and\nWHEREAS, the Council wishes to clarify the language to ensure the ordinance is as strong as possible.\nNOW, THEREFORE, BE IT ORDAINED BY THE CITY COUNCIL OF THE CITY OF JERSEY CITY THAT: that Chapter 218 (Fees and Charges) of the Municipal Code shall be amended:\n§218-12 Preventing Algorithmic Rent Fixing in the Rental Housing Market:\n1. No Change\n2. Unlawful Conduct\n1. It is unlawful for any real estate lessor, agent, or subcontractor thereof, to subscribe to, contract with, or otherwise exchange anything of value in return for or otherwise utilize the services of a Service Provider.\n2. No service provider shall facilitate an agreement not to compete among real estate lessors with respect to any aspect of residential dwelling units, including rental pricing, fees, or any other rental terms.\n\n\nRECORD OF FINAL COUNCIL VOTE – Jul 16 2025\nRIDLEY AYE SALEH AYE DEGISE AYE\nHULINGS AYE SOLOMON AYE RIVERA AYE 9-0\nBOGGIANO AYE GILMORE AYE WATTERMAN, PRES. AYE\nAdopted on second and final reading after hearing on Jul 16 2025\nThis is to certify that the foregoing Ordinance was adopted by the Municipal Council at its meeting on Jul 16 2025\nSteven M. Fulop, Mayor\nDate to Mayor: Jul 17 2025\nApproved: Jul 17 "
+        },
+        {
+          "span_id": "support:2",
+          "text": "§218-12 Preventing Algorithmic Rent Fixing in the Rental Housing Market:\n1.Definitions\na.The following terms, as used in this ordinance, shall have the following meanings:\ni.“Coordinate” or “coordinating” mean, with respect to a service provider, collecting nonpublic competitor information from real estate lessors; and, collecting of historical or contemporaneous prices, price changes, supply levels, occupancy rates, or lease or rental contract termination and renewal dates of residential dwelling units from two or more real estate lessors or from public databases;\n1.analyzing or processing of the information described in subparagraph (1)(a)(i) using a system, software, or process that uses computation; and\n2.Recommending to any other party rental prices, lease terms, or occupancy levels to a real estate lessorusing the information described in subparagraph (1)(a)(i).\na.This definition exempts owners of multiple properties for actions related exclusively to multiple properties controlled by the same rental property owner; and\n3.Licensed Real Estate Agents are not included in this definition so long as they are operating in accordance with all applicable state regulations.\nii.“Person” means any natural person, corporation, partnership, limited liability company, firm, or association.\niii.“Residential dwelling unit” means any house, apartment, accessory unit, or other unit intended to be used as a person’s primary residence; and does not include inpatient medical care, "
+        },
+        {
+          "span_id": "support:3",
+          "text": "licensed long-term care, and detention or correctional facilities.\niv.“Real estate lessor” means any individual, corporation, partnership, association, joint-stock company, trust, or unincorporated organization that owns real property and leases such property or any portion thereof in the form of a residential dwelling unit.\nv.“Service provider” means any person that performs a coordination function, as defined in Section 1(a)(i)(1) of this Act, for any real estate lessor or rentor.\n1.Licensed Real Estate Agents are not included in this definition so long as they are operating in accordance with all applicable state regulations.\nvi.“Nonpublic Competitor Information” means information, including but not limited to prices, supply levels, security deposits, ideal occupancy levels, lease contract termination, renewal dates of residential dwelling units or any other material lease terms that is less than 365 days old and is not widely and readily available to the public at no cost.\n2.Unlawful Conduct\na.It is unlawful for any real estate lessor, agent, or subcontractor thereof, to subscribe to, contract with, or otherwise exchange anything of value in return for the services of a Service Provider.\nb.No service provider shall facilitate an agreement not to compete among real estate lessors with respect to any aspect of residential dwelling units, including rental pricing, fees, or any other rental terms.\n3.Enforcement\na.Public Enforcement. The Attorney General or any municipal or "
+        }
+      ],
+      "extractor": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXsy7qPRtff2Y3zPWZJ"
+      },
+      "reviewer": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXtSkzQWvho2eRmrNPy",
+        "reason": "Matches the unlawful-conduct text (lessor, agent or subcontractor; subscribe, contract, exchange value, or otherwise utilize a Service Provider), the coordination-based Service Provider definition, and the licensed real estate agent exclusion. It does not overstate rights or reassure."
+      },
+      "scope": "rule_meaning"
+    },
+    {
+      "team_rule_id": "HN-SUP-V4S002-002",
+      "rule_fingerprint": "d6625794b31c59e3a37faf915cceb0d0ac3695a1b0c85d67fa6c9f890619a69b",
+      "claim_id": "HN-SUP-V4S002-002:meaning",
+      "text": "In Jersey City, a 'service provider' (a person who performs the coordination function of collecting nonpublic competitor information, analyzing it, and recommending rents or terms for lessors) may not facilitate an agreement not to compete among real estate lessors on any aspect of residential dwelling units, including rental pricing, fees, or other rental terms. Licensed real estate agents acting in accordance with state regulations are not included in that definition.",
+      "evidence": [
+        {
+          "span_id": "support:0",
+          "text": "AN ORDINANCE AMENDING CHAPTER 218 (MULTIPLE DWELLINGS) SECTION 12 (PREVENTING ALGORITHMIC RENT-FIXING IN THE RENTAL HOUSING MARKET), OF THE CODE OF ORDINANCES OF THE CITY OF JERSEY CITY.\nWHEREAS; the Municipal Council passed ordinance Ord. 25-057 at the May 21st 2025, Council meeting; and\nWHEREAS, the Council wishes to clarify the language to ensure the ordinance is as strong as possible.\nNOW, THEREFORE, BE IT ORDAINED BY THE CITY COUNCIL OF THE CITY OF JERSEY CITY THAT: that Chapter 218 (Fees and Charges) of the Municipal Code shall be amended:\n§218-12 Preventing Algorithmic Rent Fixing in the Rental Housing Market:\n1. No Change\n2. Unlawful Conduct\n1. It is unlawful for any real estate lessor, agent, or subcontractor thereof, to subscribe to, contract with, or otherwise exchange anything of value in return for or otherwise utilize the services of a Service Provider.\n2. No service provider shall facilitate an agreement not to compete among real estate lessors with respect to any aspect of residential dwelling units, including rental pricing, fees, or any other rental terms.\n\n\nRECORD OF FINAL COUNCIL VOTE – Jul 16 2025\nRIDLEY AYE SALEH AYE DEGISE AYE\nHULINGS AYE SOLOMON AYE RIVERA AYE 9-0\nBOGGIANO AYE GILMORE AYE WATTERMAN, PRES. AYE\nAdopted on second and final reading after hearing on Jul 16 2025\nThis is to certify that the foregoing Ordinance was adopted by the Municipal Council at its meeting on Jul 16 2025\nSteven M. Fulop, Mayor\nDate to Mayor: Jul 17 2025\nApproved: Jul 17 "
+        },
+        {
+          "span_id": "support:1",
+          "text": "licensed long-term care, and detention or correctional facilities.\niv.“Real estate lessor” means any individual, corporation, partnership, association, joint-stock company, trust, or unincorporated organization that owns real property and leases such property or any portion thereof in the form of a residential dwelling unit.\nv.“Service provider” means any person that performs a coordination function, as defined in Section 1(a)(i)(1) of this Act, for any real estate lessor or rentor.\n1.Licensed Real Estate Agents are not included in this definition so long as they are operating in accordance with all applicable state regulations.\nvi.“Nonpublic Competitor Information” means information, including but not limited to prices, supply levels, security deposits, ideal occupancy levels, lease contract termination, renewal dates of residential dwelling units or any other material lease terms that is less than 365 days old and is not widely and readily available to the public at no cost.\n2.Unlawful Conduct\na.It is unlawful for any real estate lessor, agent, or subcontractor thereof, to subscribe to, contract with, or otherwise exchange anything of value in return for the services of a Service Provider.\nb.No service provider shall facilitate an agreement not to compete among real estate lessors with respect to any aspect of residential dwelling units, including rental pricing, fees, or any other rental terms.\n3.Enforcement\na.Public Enforcement. The Attorney General or any municipal or "
+        }
+      ],
+      "extractor": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXsy7qPRtff2Y3zPWZJ"
+      },
+      "reviewer": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXtSkzQWvho2eRmrNPy",
+        "reason": "Accurately states that a service provider may not facilitate an agreement not to compete among lessors on any aspect of residential dwelling units, including rental pricing, fees, or other terms. It also states the coordination-based definition and the licensed-agent exclusion."
+      },
+      "scope": "rule_meaning"
+    },
+    {
+      "team_rule_id": "HN-SUP-P001-002",
+      "rule_fingerprint": "b2f1649cee2d122b7ff9078a9235313600467f097a2cc3bb09d0734ee9d74f41",
+      "claim_id": "HN-SUP-P001-002:meaning",
+      "text": "Under California's AB 325 provision, a person may not use or distribute a common pricing algorithm if they coerce another person to adopt the price or commercial term the algorithm recommends for the same or similar products or services in California. It requires coercion, so it is not a general ban on such software, and it does not limit antitrust laws. End consumers are not covered as a \"person.\"",
+      "evidence": [
+        {
+          "span_id": "support:0",
+          "text": "of the state. Because the bill would expand the scope of activities prohibited by the Cartwright Act, the violation of which is punishable as a crime, the bill would impose a state-mandated local program.\nThe California Constitution requires the state to reimburse local agencies and school districts for certain costs mandated by the state. Statutory provisions establish procedures for making that reimbursement.\nThis bill would provide that no reimbursement is required by this act for a specified reason.\nDigest Key\n      Vote:\n      MAJORITY  \n      Appropriation:\n      NO  \n      Fiscal Committee:\n      YES  \n      Local Program:\n      YES  \nBill Text\n\n\nThe people of the State of California do enact as follows:\n\n\n\nSECTION 1. Section 16729 is added to the Business and Professions Code, to read:\n\n\n\n\n\n16729. (a) It shall be unlawful for a person to use or distribute a common pricing algorithm as part of a contract, combination in the form of a trust, or conspiracy to restrain trade or commerce in violation of this chapter.\n(b) It shall be unlawful for a person to use or distribute a common pricing algorithm if the person coerces another person to set or adopt a recommended price or commercial term recommended by the common pricing algorithm for the same or similar products or services in the jurisdiction of this state.\n(c) Nothing in this section shall impair or limit the applicability of antitrust laws.\n(d) For purposes of this section, the following definitions apply:\n"
+        },
+        {
+          "span_id": "support:1",
+          "text": "(1) “Antitrust laws” means the provisions of this part.\n(2) “Commercial term” includes, without limitation, any of the following:\n(A) Level of service.\n(B) Availability.\n(C) Output, including quantities of products produced or distributed or the amount or level of service provided.\n(3) “Common pricing algorithm” means any\n\t\t\t\t\t\tmethodology, including a computer, software, or other technology, used by two or more persons, that uses competitor data to recommend, align, stabilize, set, or otherwise influence a price or commercial\n\t\t\t\t\t\tterm.\n(4) “Distribute,” “distribution,” and “distributing” include selling, licensing, providing access to, or otherwise making available by any means, including through a subscription or the sale of a service.\n(5) “Person” has the same meaning as defined in Section 16702 and does not include the end consumer of a product or service. \n(6) “Price” means the amount of money or other thing of value, whether tangible or not, expected, required, or given in payment for any product or service, including compensation paid to an employee or independent contractor for services provided.\n\n\nSEC. 2. Section 16756.1 is added to the Business and Professions Code, to read:\n\n\n\n\n\n16756.1. Notwithstanding any other law, in a complaint for any violation of this chapter, it is sufficient to contain factual allegations demonstrating that the existence of a contract, combination in the form of a trust, or conspiracy to restrain trade or commerce is plausible, and the "
+        }
+      ],
+      "extractor": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXuCWWhZfTVNhKXSGyw"
+      },
+      "reviewer": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXucY8yRx6SUZPVuYgD",
+        "reason": "Accurately states the coercion requirement of § 16729(b), the antitrust savings clause in (c), and the end-consumer exclusion from 'person' in (d)(5), and does not overstate it as a general software ban. The effective date and the conditional rental scope are not mentioned, which is a minor omission and not a misstatement."
+      },
+      "scope": "rule_meaning"
+    },
+    {
+      "team_rule_id": "HN-R2-D067-006-004",
+      "rule_fingerprint": "07b9bed2efc1320365bd09cb69d9c0188f0a7c7004b5292cb8290737fdb94adc",
+      "claim_id": "HN-R2-D067-006-004:meaning",
+      "text": "In New Jersey, the state's landlord-tenant guide says a landlord may charge an applicant for the cost of the credit report. A landlord may also ask for reasonable rental application fees or employment verification. The guide states no specific dollar cap.",
+      "evidence": [
+        {
+          "span_id": "support:0",
+          "text": "may seek a temporary restraining order to \nprohibit the tenant from leaving the jurisdiction of the court (Court Rule 4:51-5).  \nConsumer Fraud Protection \n Deception, fraud, misrepresentation, or knowing failure or refusal to provide important \ninformation in connection with the sale or advertisement of real estate is illegal in New Jersey \n(N.J.S.A. 56:8-2). An aggrieved consumer may sue for triple damages plus attorney’s fees for \nconsumer fraud ( N.J.S.A. 56:8 -19). A tenant may contact the Department of Law and Public \nSafety, Division of Consumer Affairs, Office of Consumer Protection, 124 Halsey Street, Newark, \nNew Jersey 07101, (973) 504 -6200, https://www.njconsumeraffairs.gov for further information \nconcerning the Consumer Fraud Act. \nCredit Checks and Background Checks \n Landlords may access credit reports for prospective tenants from credit bureaus or tenant \nscreening agencies. The landlord may use the information provided in deciding whether to approve \nor deny an applicant. If a tenant’s  application is denied due their credit report, the landlord must \nprovide the tenant with the name, address, and telephone number of the credit reporting or \nscreening agency that supplied the negative report (15 U.S.C.A. § 1681m). The landlord is allowed \nto charge the tenant for the cost of the report. The landlord may also request reasonable rental \napplication fees or employment verification. For more information about the Fair Credit Reporting \nAct, call toll -free 1 "
+        }
+      ],
+      "extractor": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXuCWWhZfTVNhKXSGyw"
+      },
+      "reviewer": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXucY8yRx6SUZPVuYgD",
+        "reason": "Matches the guide: the landlord may charge the tenant for the cost of the report and may request reasonable application fees or employment verification. It is correctly attributed to the guide and notes that no numeric cap is stated."
+      },
+      "scope": "rule_meaning"
+    },
+    {
+      "team_rule_id": "HN-SUP-P005-001",
+      "rule_fingerprint": "0766316bb294571251fe5ade58368ea2b4e0b37ddc4faca1e64bf5b9de9a0dfc",
+      "claim_id": "HN-SUP-P005-001:meaning",
+      "text": "In Hoboken, a residential landlord seeking to raise rent by more than 10% year over year on renewing a current tenant's lease must give four disclosures before the increase is implemented: cost itemization, whether a rent algorithm was used, the tenant's right to sue at their own expense, and Division of Housing contact information. Landlords found guilty of failing to do so face a fine of up to $1,000 per incident.",
+      "evidence": [
+        {
+          "span_id": "support:0",
+          "text": "applicable.]\n [Editor's Note: Former Ch. 158, Rooming Houses; Licenses, adopted 12-18-1974 by Ord. No. C-25, as amended, was repealed 2-15-2023 by Ord. No. B-537.]\n\n\n\n      \n            \n\n            \n            \n\n  \n\n    \n      \n    \n    \n  \n\n    \n    \n      Article I\n    \n    \nMandatory Disclosures for Certain Rent Increases    \n    \n  \n      \n  \n\n  \n  \n            \n            \n\n  \n\n    \n      \n    \n    \n  \n\n    \n    \n      § 158-1\n    \n    \nMandatory disclosures for rental increases over 10%.    \n    \n  \n      \n  \n\n  \n  \n            \n            \n\n  \n\n    \n      \n    \n    \n  \n\n    \n    \n      Article II\n    \n    \nAlgorithmic Rent Fixing in Rental Housing Market    \n    \n  \n      \n  \n\n  \n  \n            \n            \n\n  \n\n    \n      \n    \n    \n  \n\n    \n    \n      § 158-2\n    \n    \nAlgorithmic rent fixing in rental housing market prohibited.    \n    \n  \n      \n  \n\n  \n  \n            \n      \n\n      \n\n                \n  \n\n    \n      \n    \n    \n  \n\n    \n    \n      Article I\n    \n    \nMandatory Disclosures for Certain Rent Increases    \n    \n  \n      \n  \n                \n        \n\n        \n\n\n\n\n\n[Adopted 4-2-2025 by Ord. No. B-750]\n                \n                \n  \n\n    \n      \n    \n    \n  \n\n    \n    \n      § 158-1\n    \n    \nMandatory disclosures for rental increases over 10%.    \n    \n  \n      \n  \n                \n        \n\n        \n\n\n\n\n\n\nA. \n\nAll residential landlords seeking to increase rent by more than 10% upon a renewal of a lease with a current tenant year over year "
+        },
+        {
+          "span_id": "support:1",
+          "text": "shall be required to make the following disclosures to existing tenants either in the lease upon renewal (must be clearly indicated on the first page) or on a form provided by the Hoboken Division of Housing prior to the increase being implemented:\n\n(1) \n\nAn itemization of the costs associated with the rent increase;\n\n(2) \n\nA statement as to whether a rent algorithm was used to determine the rent increase;\n\n(3) \n\nA statement notifying the tenant of their right to take legal action (at their own expense) if they believe that the proposed rent increase is unconscionable or otherwise not in accordance with local or state law; and\n\n(4) \n\nThe contact information for the Hoboken Division of Housing and a statement indicating that tenants may reach out to the Hoboken Division of Housing and/or Tenant Advocate with questions or concerns.\n\n\nB. \n\nAny landlord who pleads guilty to or is found guilty of failing to provide the disclosures to tenants as provided herein shall be subject to a fine not exceeding $1,000 per incident.\n\n                \n                \n  \n\n    \n      \n    \n    \n  \n\n    \n    \n      Article II\n    \n    \nAlgorithmic Rent Fixing in Rental Housing Market    \n    \n  \n      \n  \n                \n        \n\n        \n\n\n\n\n\n[Adopted 7-9-2025 by Ord. No. B-781]\n                \n                \n  \n\n    \n      \n    \n    \n  \n\n    \n    \n      § 158-2\n    \n    \nAlgorithmic rent fixing in rental housing market prohibited.    \n    \n  \n      \n  \n                \n        \n\n        \n"
+        }
+      ],
+      "extractor": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXwUYUUEoS4TCxjhUfZ"
+      },
+      "reviewer": {
+        "approved": true,
+        "model": "claude-sonnet-5-5",
+        "request_id": "msg_011CfgXwpw4pjKCJBz2gJuVR",
+        "reason": "Threshold, four disclosures, timing before implementation, and fine of up to $1,000 per incident match the ordinance. The omission of the guilty-plea route and the lease or form placement is minor and not distorting."
+      },
+      "scope": "rule_meaning"
+    }
+  ]
+}

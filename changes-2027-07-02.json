@@ -1,0 +1,7 @@
+{
+  "T1":{"affected_address_ids":["A-DEMO6"],"conflict_flag_address_ids":[],"notes":"SYNTHETIC FIXTURE: dated California case remains represented by supplied output."},
+  "T2":{"affected_address_ids":["A-DEMO1"],"conflict_flag_address_ids":[],"notes":"SYNTHETIC FIXTURE: local boundary result unchanged."},
+  "T3":{"affected_address_ids":["A-DEMO1","A-DEMO3","A-DEMO5"],"conflict_flag_address_ids":["A-DEMO1"],"notes":"SYNTHETIC FIXTURE: statewide future rule is now effective in this generated snapshot; possible local conflict remains flagged."},
+  "T4":{"affected_address_ids":["A-DEMO2","A-DEMO4"],"conflict_flag_address_ids":[],"notes":"SYNTHETIC FIXTURE: pending proposal case shown from engine-supplied output."},
+  "T5":{"affected_address_ids":[],"conflict_flag_address_ids":[],"notes":"SYNTHETIC FIXTURE: failed ballot measure still has no affected addresses."}
+}

@@ -1,0 +1,17 @@
+{
+  "generated_at":"2026-10-03T20:20:00-04:00",
+  "extraction":{"documents_attempted":53,"accepted_rules":199,"api_calls":113,"estimated_usd":4.05},
+  "jurisdictions":{"checked":6,"matched":5,"unknown":1},
+  "validation":{"checks":[
+    {"name":"Synthetic schema/display smoke","status":"pass","detail":"Fixture records cover each supported display state."},
+    {"name":"Manifest source integrity","status":"fail","detail":"Intentional fixture mismatch demonstrates unresolved integrity messaging."},
+    {"name":"Browser automation","status":"not_run","detail":"Set by fixture to demonstrate a not-run validation state; RETURN_SUMMARY records actual verification separately."}
+  ]},
+  "limitations":[
+    "SYNTHETIC FIXTURE ONLY: none of these records is legal data.",
+    "A-DEMO2 intentionally lacks provenance to exercise the unavailable evidence state.",
+    "A-DEMO3 intentionally lacks matched geography.",
+    "A-DEMO5 references a missing rule record; A-DEMO6 contains a malformed lookup value.",
+    "Hash integrity and legal accuracy are distinct; a mismatch is surfaced, not silently resolved."
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "gate": "release-integrity-1",
+  "passed": true,
+  "problems": [],
+  "rules": 310,
+  "addresses": 500,
+  "snapshot_status_counts": {
+    "2025-12-31": {
+      "unknown": 33622,
+      "not_yet_effective": 4926,
+      "applies": 1402,
+      "pending": 614
+    },
+    "2026-01-02": {
+      "unknown": 35117,
+      "applies": 2152,
+      "not_yet_effective": 2681,
+      "pending": 614
+    },
+    "2026-10-01": {
+      "unknown": 29189,
+      "applies": 9782,
+      "not_yet_effective": 979,
+      "pending": 614
+    },
+    "2027-07-02": {
+      "unknown": 37378,
+      "applies": 2572,
+      "pending": 614
+    }
+  },
+  "limits": [
+    "Integrity checks do not measure legal accuracy.",
+    "A change test pass does not confirm all property eligibility.",
+    "Browser interaction and public deployment require separate verification."
+  ],
+  "hashes": {
+    "ui/LIVE_RESIDENT_REVIEW.md": "e5cbc5c323818aa49d9bd9ac8a765d7477721fa7da78e4db69c4799e8a15b776",
+    "ui/README.md": "de1a6a3d0b873f4963dd5c28303fd5104ed5037ebd875dbee9b62f038e988221",
+    "ui/RESIDENT_CLAIMS_CONTRACT.md": "9513995adfb200fbe8552d4848f8d62474cdc2c1b8284b59b0112fe53eed8524",
+    "ui/RESIDENT_UI_PASS_LOG.md": "4673df2ab14f61b167c338b4e8d8099e3af8b88338f47f24eb7c70a8649468d8",
+    "ui/app.js": "89c17237ed91764048173aa9f2987d7ddbaeddd9b33de907a818197bf3e9bbe5",
+    "ui/data/addresses.json": "bd222a88f92469a290766a3d101a8cc5b65313fc2d207408225b01726d98756b",
+    "ui/data/changes.json": "a2cb08a0311b3bc49ab160f606e4311a08ae0193832ce17f5a9bc73bb567268d",
+    "ui/data/coverage.json": "3db0b4127267d6fd014f28e276a4b402fbf33a9a3560caa2daaa49413bc91e17",
+    "ui/data/jurisdictions.json": "a6a96314d1dda3042c0af6528b246d75fb0351761372fd0aba2ccaa1d6e961ce",
+    "ui/data/lookups-2025-12-31.json": "1d2e028d24e6545dd917d2c6fac2c3a47d748a8f3ec3233eb5956a354bc3d021",
+    "ui/data/lookups-2026-01-02.json": "475a8846a8f26bbe633422584c578b399e146b184f1b2711e3c1c479d44adc7a",
+    "ui/data/lookups-2026-10-01.json": "6487f509a09dc6c06278597c9fa2a10abd3d55eea397dd811a29ebabf30db41f",
+    "ui/data/lookups-2027-07-02.json": "3ec59fc6194e57b3d40429fe9bc13c66f51f8345d0c8c95320d46ad3f7d5d28b",
+    "ui/data/lookups.json": "6487f509a09dc6c06278597c9fa2a10abd3d55eea397dd811a29ebabf30db41f",
+    "ui/data/manifest.json": "be12becfad3094fc3d8906d447890046e79ae5db8ee6c77a538660c132e7094c",
+    "ui/data/provenance.json": "ffd015bdc635ba3bb83e287c57388822423682245dac5c5de0756e6c0487ace3",
+    "ui/data/refresh-receipt.json": "69ec63ecd3f2247aff6f70e8ea2cca9a519ada1fbb4dc80d9c1be3e458250f8c",
+    "ui/data/report.json": "a4d4b25d83e92dcfada84793036cdf50427a9d9418e04ac08fe5a4ad824c61af",
+    "ui/data/resident-claims.json": "9dcdb0c1afd972ae799ae828abe5e8146613f391bdb9b3bb9533cc59eebf0ab4",
+    "ui/data/rules.json": "8098fa8e49fdab041640ec40fb5fd59a10d8d4a291c0bebe77d808afb0dca60a",
+    "ui/fixtures/addresses.json": "00f3c511ec6cdf45869247977de29f162e3a069c7e1ccfce052b23b8640dca98",
+    "ui/fixtures/changes-2026-10-01.json": "10b474723442bb7d9ccfbacde70c0407633411abff4bc41fe270b4b60e42cfa7",
+    "ui/fixtures/changes-2027-07-02.json": "a74efcb9417b64c7d84f7149424e6132307c108ed99c9d3d8b6d72d86f4fdd13",
+    "ui/fixtures/jurisdictions.json": "5face8b1a3c3fa3cdc0644bdd2202d76074ba2b6642029926b24c08d1f3f97fd",
+    "ui/fixtures/lookups-2026-10-01.json": "d310094656c75a974f2fc2200235a28d54873619e2901551642ff6ff1140872a",
+    "ui/fixtures/lookups-2027-07-02.json": "8f66bb1dec95334436da40a0605b34f12a401dd56eadbbb593eec81b8975b5f7",
+    "ui/fixtures/manifest.json": "7dfc5f123d586d2f1e900ed5105afe763a58a952a6baf1c376589bce5142a555",
+    "ui/fixtures/provenance.json": "7c96bf9cb52650bf95cf494535469b8f78548310a3d6bd9f3ba88792e7bdc471",
+    "ui/fixtures/report.json": "87f6847333b1f4ab1ad58d7d5a841beb6d903ea96ddcc71644b69d3eae0dbe3b",
+    "ui/fixtures/rules.json": "2b985f97ec9075777fcd198deb54a1f70165cbf206ca575b0b7059a51e8f27e4",
+    "ui/index.html": "8fa4fe1a384951a119f454f52a79425fc5b0aba1f9f984690898eca7caf6251e",
+    "ui/lookup_codec.js": "247975f12f25e18007637d5855aaec279549c71c132d04cfc8d41e52d55bf20a",
+    "ui/resident_logic.js": "b106199ddfce73694d1f9f4e2059e099a34249092e2851828b83434359265c9b",
+    "ui/styles.css": "8c5922b1909927b0f48634069e7405291b09ca0466d8dc6bdbc29a84e3cac795",
+    "ui/tests/test_live_claim_artifact.js": "f09b1c290f2736a44c35d5869593960e82c73238af89420f37c71dc53aa4f724",
+    "ui/tests/test_lookup_codec.js": "508b72c9925d9f21be5f1458c393f080d4e196dcd6b4df38ab63414fe7532651",
+    "ui/tests/test_resident_claims.js": "70745b47422aa7be3c170c3e179b7e83bbbfb54a49fa5612edda9d43aa4441db",
+    "ui/tests/test_resident_logic.js": "b8931a1971a286c6cf95b5122ae73d3dbe9f9ac741dee046195cfd4ee869b190",
+    "ui/tests/verify_ui.py": "dd196fc1acf3a78e6d7dbc9f57556d32db25010ec7969875aedaa67588bee4a8"
+  }
+}

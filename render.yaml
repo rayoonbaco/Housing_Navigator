@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: housing-navigator
+    runtime: static
+    buildCommand: "true"
+    staticPublishPath: ./ui
+    headers:
+      - path: /data/*
+        name: Cache-Control
+        value: no-cache

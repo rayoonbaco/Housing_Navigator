@@ -1,0 +1,22 @@
+{
+  "contract_version": "1",
+  "mode": "fixture",
+  "default_as_of": "2026-10-01",
+  "addresses_url": "fixtures/addresses.json",
+  "rules_url": "fixtures/rules.json",
+  "provenance_url": "fixtures/provenance.json",
+  "jurisdictions_url": "fixtures/jurisdictions.json",
+  "report_url": "fixtures/report.json",
+  "snapshots": [
+    {
+      "as_of": "2026-10-01",
+      "lookups_url": "fixtures/lookups-2026-10-01.json",
+      "changes_url": "fixtures/changes-2026-10-01.json"
+    },
+    {
+      "as_of": "2027-07-02",
+      "lookups_url": "fixtures/lookups-2027-07-02.json",
+      "changes_url": "fixtures/changes-2027-07-02.json"
+    }
+  ]
+}

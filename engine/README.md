@@ -1,0 +1,1 @@
+Source code from the preserved extraction/coverage pipeline. These are inspection files, not a new setup command. Full runnable inputs and logs remain in the versioned local project and saved packages. Do not invoke broad run_next.py to repeat extraction. Current benchmark exports are in ../submission_json.zip.

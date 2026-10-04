@@ -1,0 +1,26 @@
+{
+  "version": "finish-v4",
+  "offline": false,
+  "outputs": [
+    "C:\\PROJECTS\\Housing_Navigator\\outputs\\engine-v4-offline\\20261004T040234-f4615394",
+    "C:\\PROJECTS\\Housing_Navigator\\outputs\\engine-v4-offline\\20261004T040310-8b18182d",
+    "C:\\PROJECTS\\Housing_Navigator\\outputs\\t2-definition-review\\20261004T040237-83de816c",
+    "C:\\PROJECTS\\Housing_Navigator\\outputs\\interaction-review-v1\\20261004T040314-9493b073",
+    "C:\\PROJECTS\\Housing_Navigator\\outputs\\resident-prose\\20261004T040331-52ec5399"
+  ],
+  "stage_errors": [],
+  "integrity_passed": true,
+  "paid_call_limit": 16,
+  "limits": [
+    "Independent stage failures are preserved; success is not manufactured.",
+    "T2 reviewed unknowns do not establish eligibility.",
+    "Interaction output awaits coordinator integration review.",
+    "Browser and public deployment require separate checks."
+  ],
+  "genuine_api_calls": 13,
+  "estimated_usd": 0.855802,
+  "claims_published": 13,
+  "claims_withheld_after_audit": 6,
+  "precedence_edges_promoted": 0,
+  "snapshot_transport": "lossless dictionary encoding; original JSON exports archived separately"
+}

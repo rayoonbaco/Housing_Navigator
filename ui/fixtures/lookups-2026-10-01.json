@@ -1,0 +1,18 @@
+{
+  "as_of":"2026-10-01",
+  "lookups":{
+    "A-DEMO1":[
+      {"team_rule_id":"FX-RENT-1","result":"applies","explanation":"Synthetic local fixture result: the supplied engine output says the rent-adjustment rule applies.","conflict_flag":false},
+      {"team_rule_id":"FX-JC-1","result":"unknown","explanation":"Synthetic result: owner-occupancy data is absent, so the engine does not guess whether the exception applies.","conflict_flag":false},
+      {"team_rule_id":"FX-DEP-1","result":"superseded","explanation":"Synthetic result: the statewide fixture rule is covered, but a stricter local fixture rule is marked as governing.","conflict_flag":false},
+      {"team_rule_id":"FX-FEE-1","result":"not_yet_effective","explanation":"Synthetic result: the enacted fixture fee change begins after this snapshot date.","conflict_flag":false},
+      {"team_rule_id":"FX-SCREEN-1","result":"applies","explanation":"Synthetic result: the screening restriction is returned and a timing conflict is flagged for review.","conflict_flag":true},
+      {"team_rule_id":"FX-ALG-1","result":"not_yet_effective","explanation":"Synthetic result: the statewide algorithmic rule has not reached its effective date.","conflict_flag":true}
+    ],
+    "A-DEMO2":[{"team_rule_id":"FX-MA-P1","result":"pending","explanation":"Synthetic result: this is a proposal, not current law. Untrusted-text probe: <img src=x onerror=alert(1)> must display literally. The fixture intentionally omits its provenance record.","conflict_flag":false}],
+    "A-DEMO3":[{"team_rule_id":"FX-JC-1","result":"unknown","explanation":"Synthetic result: geography is unresolved, so applicability remains unknown rather than using the postal city as legal jurisdiction.","conflict_flag":false}],
+    "A-DEMO4":[],
+    "A-DEMO5":[{"team_rule_id":"FX-MISSING-RULE","result":"unknown","explanation":"Synthetic error case: lookup references a rule record that was not supplied.","conflict_flag":false}],
+    "A-DEMO6":"INTENTIONALLY MALFORMED FIXTURE LOOKUP"
+  }
+}
